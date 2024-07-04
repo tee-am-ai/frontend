@@ -18,10 +18,10 @@ const Register = () => {
     const target_url = "https://asia-southeast2-teeamai-427702.cloudfunctions.net/teeamai/signup";
     
     const data = {
-        "fullname" : getValue("fullname"),
+        "namalengkap" : getValue("namalengkap"),
         "email": getValue("email"),
         "password": getValue("password"),
-        "confirmpassword": getValue("confirmpassword"),
+        "confirmpass": getValue("confirmpass"),
     };
     
     postRegister(target_url, data, responseData);
