@@ -28,8 +28,7 @@ const Register = () => {
 }
 
 function responseData (result) {
-    console.log(result); // Tambahkan log ini untuk memeriksa nilai result
-    if (result.status === true && result.error === null) {
+    if (result.error === undefined || !result.error) {
         Swal.fire({
             icon: "success",
             title: "Register Successful",
