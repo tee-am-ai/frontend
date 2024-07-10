@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Chat | Chat AI - Responsive Bootstrap 5 Chat App</title>
+  <title>Chat AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     content="Chat AI - Responsive Chat App Template in HTML. A fully featured HTML chat messenger template in Bootstrap 5"
@@ -12,7 +12,7 @@
     content="Chat AI chat template, chat, web chat template, chat status, chat template, communication, discussion, group chat, message, messenger template, status" />
   <meta content="Themesbrand" name="author" />
   <!-- App favicon -->
-  <link rel="shortcut icon" href="assets/images/favicon.ico" id="tabIcon" />
+  <link rel="shortcut icon" href="assets/favicon.ico" id="tabIcon" />
 
   <!-- glightbox css -->
   <link rel="stylesheet" href="assets/libs/glightbox/css/glightbox.min.css" />
@@ -30,6 +30,28 @@
   <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
   <!-- App Css-->
   <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+  <style>
+    .message {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.user {
+    background-color: #007bff;
+    color: #fff;
+    float: right;
+}
+
+.bot {
+    background-color: #f0f0f0;
+    color: #000;
+    float: left;
+}
+
+  </style>
 </head>
 
 <body>
@@ -156,22 +178,11 @@
               </div>
 
               <h5 class="fs-17 mb-1 text-truncate">Dushane Daniel</h5>
-              <p class="text-muted fs-14 text-truncate mb-0">
-                Front end Developer
-              </p>
             </div>
             <!-- End profile user -->
 
             <!-- Start user-profile-desc -->
             <div class="p-4 profile-desc" data-simplebar>
-              <div class="text-muted">
-                <p class="mb-3">
-                  A professional profile is an introductory section on your
-                  resume that highlights your relevant qualifications and
-                  skills.
-                </p>
-              </div>
-
               <div class="border-bottom border-bottom-dashed mb-4 pb-2">
                 <div class="d-flex py-2 align-items-center">
                   <div class="flex-shrink-0 me-3">
@@ -179,15 +190,6 @@
                   </div>
                   <div class="flex-grow-1">
                     <p class="mb-0">Dushane Daniel</p>
-                  </div>
-                </div>
-
-                <div class="d-flex py-2 align-items-center">
-                  <div class="flex-shrink-0 me-3">
-                    <i class="ri-phone-line align-middle text-muted fs-19"></i>
-                  </div>
-                  <div class="flex-grow-1">
-                    <p class="mb-0">+(365) 1456 12584</p>
                   </div>
                 </div>
 
@@ -205,7 +207,7 @@
                     <i class="ri-map-pin-2-line align-middle text-muted fs-19"></i>
                   </div>
                   <div class="flex-grow-1">
-                    <p class="mb-0">California, USA</p>
+                    <p class="mb-0">Bandung, Indonesia</p>
                   </div>
                 </div>
               </div>
@@ -595,17 +597,10 @@
                     </div>
                     <div class="flex-grow-1 overflow-hidden">
                       <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0 chat-user-img online user-own-img align-self-center me-3 ms-0">
-                          <img src="assets/images/users/avatar-2.jpg" class="rounded-circle avatar-sm" alt="" />
-                          <span class="user-status"></span>
-                        </div>
                         <div class="flex-grow-1 overflow-hidden">
                           <h6 class="text-truncate mb-0 fs-18">
-                            <a href="#" class="user-profile-show text-reset">Victoria Lane</a>
+                            <a href="#" class="user-profile-show text-reset">Team AI</a>
                           </h6>
-                          <p class="text-truncate text-muted mb-0">
-                            <small>Online</small>
-                          </p>
                         </div>
                       </div>
                     </div>
@@ -617,11 +612,14 @@
                       <div class="dropdown">
                         <button class="btn nav-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                           aria-haspopup="true" aria-expanded="false">
-                          <i class="bx bx-search"></i>
+                          <i class="bx bx-share"></i>
                         </button>
                         <div class="dropdown-menu p-0 dropdown-menu-end dropdown-menu-lg">
                           <div class="search-box p-2">
-                            <input type="text" class="form-control" placeholder="Search.." id="searchChatMessage" />
+                            <h6>Share public link to chat</h6>
+                            <p>Your name, custom instructions, and any messages you add after sharing stay private. <a href="#">Learn more</a></p>
+                            <input type="text"  class="form-control" readonly value="https://teamai.com/share/..." />
+                            <!-- <input type="text" class="form-control" placeholder="Search.." id="searchChatMessage" /> -->
                           </div>
                         </div>
                       </div>
@@ -629,19 +627,23 @@
 
                     <li class="list-inline-item">
                       <div class="dropdown">
-                        <button class="btn nav-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false">
-                          <i class="bx bx-dots-vertical-rounded"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a class="dropdown-item d-flex justify-content-between align-items-center d-lg-none user-profile-show"
-                            href="#">View Profile <i class="bx bx-user text-muted"></i></a>
-                          <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">Archive <i
-                              class="bx bx-archive text-muted"></i></a>
-                          <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">Muted
-                            <i class="bx bx-microphone-off text-muted"></i></a>
-                          <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">Delete <i
-                              class="bx bx-trash text-muted"></i></a>
+                        <a href="#" class="flex-shrink-0 chat-user-img online user-own-img align-self-center me-3 ms-0" role="button" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                          <img src="assets/favicon.ico" class="rounded-circle avatar-sm" alt="" />
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item d-flex align-items-center justify-content-between" id="pills-user-tab"
+                            data-bs-toggle="pill" href="#pills-user" role="tab">Profile <i
+                              class="bx bx-user-circle text-muted ms-1"></i></a>
+                          <a class="dropdown-item d-flex align-items-center justify-content-between" id="pills-setting-tab"
+                            data-bs-toggle="pill" href="#pills-setting" role="tab">Setting <i
+                              class="bx bx-cog text-muted ms-1"></i></a>
+                          <a class="dropdown-item d-flex align-items-center justify-content-between"
+                            href="#">Change Password
+                            <i class="bx bx-lock-open text-muted ms-1"></i></a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">Log out <i
+                              class="bx bx-log-out-circle text-muted ms-1"></i></a>
                         </div>
                       </div>
                     </li>
@@ -653,199 +655,39 @@
 
             <!-- start chat conversation -->
 
-            <div class="chat-conversation p-3 p-lg-4" id="chat-conversation" data-simplebar>
-              <ul class="list-unstyled chat-conversation-list" id="users-conversation"></ul>
+            <div class="chat-conversation p-3 p-lg-4" id="chat-box" data-simplebar>
+              
+             </div>
 
-              <!-- <div class="chat-list left" id="10">
-                            <div class="conversation-list">
-                                <div class="chat-avatar">
-                                    <img src="assets/images/users/avatar-2.jpg" alt="">
-                                </div>
-                                <div class="user-chat-content">
-                                    <div class="ctext-wrap">
-                                        <div class="message-img mb-0">
-                                            <div class="message-img-list">
-                                                <div>
-                                                    <iframe src="https://www.youtube.com/embed/PHcgN1GTjdU" title="YouTube video"
-                                                        class="w-100 rounded" autoplay allowfullscreen></iframe>
-                                                </div>
-
-                                                <div class="message-img-link">
-                                                    <ul class="list-inline mb-0">
-                                                        <li class="list-inline-item dropdown">
-                                                            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                                                aria-haspopup="true" aria-expanded="false">
-                                                                <i class="bx bx-dots-horizontal-rounded"></i>
-                                                            </a>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item d-flex align-items-center justify-content-between"
-                                                                    href="assets/images/small/img-1.jpg" download="">
-                                                                    Download <i class="bx bx-download ms-2 text-muted"></i>
-                                                                </a>
-                                                                <a class="dropdown-item d-flex align-items-center justify-content-between"
-                                                                    href="#" data-bs-toggle="collapse" data-bs-target=".replyCollapse">
-                                                                    Reply <i class="bx bx-share ms-2 text-muted"></i>
-                                                                </a>
-                                                                <a class="dropdown-item d-flex align-items-center justify-content-between"
-                                                                    href="#" data-bs-toggle="modal" data-bs-target=".forwardModal">
-                                                                    Forward <i class="bx bx-share-alt ms-2 text-muted"></i>
-                                                                </a>
-                                                                <a class="dropdown-item d-flex align-items-center justify-content-between"
-                                                                    href="#">
-                                                                    Bookmark <i class="bx bx-bookmarks text-muted ms-2"></i>
-                                                                </a>
-                                                                <a class="dropdown-item d-flex align-items-center justify-content-between delete-image"
-                                                                    href="#">
-                                                                    Delete <i class="bx bx-trash ms-2 text-muted"></i>
-                                                                </a>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="conversation-name">
-                                        <small class="text-muted time">11:45 am</small>
-                                        <span class="text-success check-message-icon"><i class="bx bx-check-double"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="chat-list left" id="11">
-                            <div class="conversation-list">
-                                <div class="chat-avatar">
-                                    <img src="assets/images/users/avatar-2.jpg" alt="">
-                                </div>
-                                <div class="user-chat-content">
-                                    <div class="ctext-wrap">
-                                        <div class="message-img mb-0">
-                                            <div class="message-img-list">
-                                                <audio controls>
-                                                    <source src="http://w3codegenerator.com/audio/audio.mp3" type="audio/mpeg">
-                                                </audio>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="conversation-name">
-                                        <small class="text-muted time">11:45 am</small>
-                                        <span class="text-success check-message-icon"><i class="bx bx-check-double"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-            </div>
-
-            <div class="alert alert-warning alert-dismissible copyclipboard-alert px-4 fade show" id="copyClipBoard"
-              role="alert">
-              Message copied
-            </div>
-            <!-- end chat conversation end -->
+            
           </div>
 
           <!-- conversation group -->
-          <div id="channel-chat" class="position-relative">
-            <div class="py-3 user-chat-topbar">
-              <div class="row align-items-center">
-                <div class="col-sm-8 col-4">
-                  <ul class="list-inline user-chat-nav text-end mb-0">
-                    <li class="list-inline-item">
-                      <div class="dropdown">
-                        <button class="btn nav-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false">
-                          <i class="bx bx-search"></i>
-                        </button>
-                        <div class="dropdown-menu p-0 dropdown-menu-end dropdown-menu-lg">
-                          <div class="search-box p-2">
-                            <input type="text" class="form-control" placeholder="Search.." />
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-
-                    <li class="list-inline-item d-none d-lg-inline-block me-2 ms-0">
-                      <button type="button" class="btn nav-btn" data-bs-toggle="modal"
-                        data-bs-target=".groupvideocallModal">
-                        <i class="bx bx-video"></i>
-                      </button>
-                    </li>
-
-                    <li class="list-inline-item d-none d-lg-inline-block me-2 ms-0">
-                      <button type="button" class="btn nav-btn user-profile-show">
-                        <i class="bx bxs-info-circle"></i>
-                      </button>
-                    </li>
-
-                    <li class="list-inline-item">
-                      <div class="dropdown">
-                        <button class="btn nav-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false">
-                          <i class="bx bx-dots-vertical-rounded"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a class="dropdown-item d-flex justify-content-between align-items-center d-lg-none user-profile-show"
-                            href="#">View Profile <i class="bx bx-user text-muted"></i></a>
-                          <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">Archive <i
-                              class="bx bx-archive text-muted"></i></a>
-                          <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">Muted
-                            <i class="bx bx-microphone-off text-muted"></i></a>
-                          <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">Delete <i
-                              class="bx bx-trash text-muted"></i></a>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- end chat user head -->
-
-            <!-- start chat conversation -->
-
-            <div class="chat-conversation p-3 p-lg-4" id="chat-conversation" data-simplebar>
-              <ul class="list-unstyled chat-conversation-list" id="channel-conversation"></ul>
-            </div>
-            <div class="alert alert-warning alert-dismissible copyclipboard-alert px-4 fade show"
-              id="copyClipBoardChannel" role="alert">
-              message copied
-            </div>
-            <!-- end chat conversation end -->
-          </div>
-
+          
+          
           <!-- start chat input section -->
           <div class="position-relative">
             <div class="chat-input-section p-4 border-top">
-              <form id="chatinput-form" enctype="multipart/form-data">
+              <form id="chatinput-form">
                 <div class="row g-0 align-items-center">
-                  <div class="file_Upload"></div>
-                  <div class="col-auto">
-                  </div>
+                  <!-- <div class="file_Upload"></div> -->
                   <div class="col">
                     <div class="position-relative">
-                      <div class="chat-input-feedback">
+                      <!-- <div class="chat-input-feedback">
                         Please Enter a Message
-                      </div>
+                      </div> -->
                       <input autocomplete="off" type="text"
                         class="form-control form-control-lg bg-light border-0 chat-input" autofocus id="chat-input"
                         placeholder="Type your message..." />
-                      <!-- <div class="chat-input-typing">
-                        <span class="typing-user d-flex">Victoria Lane is typing
-                          <span class="typing ms-2">
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                          </span>
-                        </span>
-                      </div> -->
+                    
                     </div>
                   </div>
                   <div class="col-auto">
                     <div class="chat-input-links ms-2 gap-md-1">
                       <div class="links-list-item">
-                        <button type="submit" class="btn btn-primary btn-lg chat-send waves-effect waves-light"
-                          data-bs-toggle="collapse" data-bs-target=".chat-input-collapse1.show">
-                          <i class="bx bxs-send align-middle" id="submit-btn"></i>
+                        <button class="btn btn-primary"
+                          id="submit-btn">
+                          <i class="bx bxs-send align-middle"></i>
                         </button>
                       </div>
                     </div>
@@ -853,7 +695,7 @@
                 </div>
               </form>
             </div>
-            <div class="replyCard">
+            <!-- <div class="replyCard">
               <div class="card mb-0">
                 <div class="card-body py-3">
                   <div class="replymessage-block mb-0 d-flex align-items-start">
@@ -869,7 +711,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <!-- end chat input section -->
         </div>
@@ -899,9 +741,11 @@
   <script src="assets/libs/fg-emoji-picker/fgEmojiPicker.js"></script>
 
   <!-- page init -->
-  <script src="assets/js/pages/index.init.js"></script>
+  <!-- <script src="assets/js/pages/index.init.js"></script> -->
 
   <script src="assets/js/app.js"></script>
+
+ <script type="module" src="assets/js/chat.js"></script>
 </body>
 
 </html>
