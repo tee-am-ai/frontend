@@ -44,4 +44,4 @@ function responseData (result) {
     }
 }
 
-document.getElementById("loginButton").addEventListener("click", Login);
+document.getElementById("button").addEventListener("click", Login);
