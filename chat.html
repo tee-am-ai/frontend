@@ -33,24 +33,23 @@
 
   <style>
     .message {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 80%;
-}
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 80%;
+    }
 
-.user {
-    background-color: #007bff;
-    color: #fff;
-    float: right;
-}
+    .user {
+      background-color: #007bff;
+      color: #fff;
+      float: right;
+    }
 
-.bot {
-    background-color: #f0f0f0;
-    color: #000;
-    float: left;
-}
-
+    .bot {
+      background-color: #f0f0f0;
+      color: #000;
+      float: left;
+    }
   </style>
 </head>
 
@@ -384,112 +383,6 @@
                   </div>
                 </div>
                 <!-- end personal info card -->
-
-                <div class="accordion-item">
-                  <div class="accordion-header" id="privacy1">
-                    <a class="accordion-button fs-14 fw-medium collapsed" data-bs-toggle="collapse" href="#privacy"
-                      aria-expanded="false" aria-controls="privacy">
-                      <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0 me-3 avatar-xs">
-                          <div class="avatar-title bg-soft-info text-info rounded">
-                            <i class="bx bxs-lock"></i>
-                          </div>
-                        </div>
-                        Privacy
-                      </div>
-                    </a>
-                  </div>
-                  <div id="privacy" class="accordion-collapse collapse" aria-labelledby="privacy1"
-                    data-bs-parent="#settingprofile">
-                    <div class="accordion-body">
-                      <h6 class="mb-3">Who can see my personal info</h6>
-                      <ul class="list-unstyled vstack gap-4 mb-0">
-                        <li>
-                          <div class="d-flex align-items-center">
-                            <div class="flex-grow-1 overflow-hidden">
-                              <h5 class="fs-13 mb-0 text-truncate">
-                                Profile photo
-                              </h5>
-                            </div>
-                            <div class="flex-shrink-0 ms-2">
-                              <select class="form-select form-select-sm">
-                                <option value="Everyone" selected>
-                                  Everyone
-                                </option>
-                                <option value="Selected">Selected</option>
-                                <option value="Nobody">Nobody</option>
-                              </select>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="d-flex align-items-center">
-                            <div class="flex-grow-1 overflow-hidden">
-                              <h5 class="fs-13 mb-0 text-truncate">Status</h5>
-                            </div>
-                            <div class="flex-shrink-0 ms-2">
-                              <select class="form-select form-select-sm">
-                                <option value="Everyone" selected>
-                                  Everyone
-                                </option>
-                                <option value="Selected">Selected</option>
-                                <option value="Nobody">Nobody</option>
-                              </select>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="d-flex align-items-center">
-                            <div class="flex-grow-1 overflow-hidden">
-                              <h5 class="fs-13 mb-0 text-truncate">Groups</h5>
-                            </div>
-                            <div class="flex-shrink-0 ms-2">
-                              <select class="form-select form-select-sm">
-                                <option value="Everyone" selected>
-                                  Everyone
-                                </option>
-                                <option value="Selected">Selected</option>
-                                <option value="Nobody">Nobody</option>
-                              </select>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="d-flex align-items-center">
-                            <div class="flex-grow-1 overflow-hidden">
-                              <h5 class="fs-13 mb-0 text-truncate">
-                                Last seen
-                              </h5>
-                            </div>
-                            <div class="flex-shrink-0 ms-2">
-                              <div class="form-check form-switch">
-                                <input type="checkbox" class="form-check-input" id="privacy-lastseenSwitch" checked />
-                                <label class="form-check-label" for="privacy-lastseenSwitch"></label>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="d-flex align-items-center">
-                            <div class="flex-grow-1 overflow-hidden">
-                              <h5 class="fs-13 mb-0 text-truncate">
-                                Read receipts
-                              </h5>
-                            </div>
-                            <div class="flex-shrink-0 ms-2">
-                              <div class="form-check form-switch">
-                                <input type="checkbox" class="form-check-input" id="privacy-readreceiptSwitch"
-                                  checked />
-                                <label class="form-check-label" for="privacy-readreceiptSwitch"></label>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- end privacy card -->
                 <!-- Start security card -->
                 <div class="accordion-item">
                   <div class="accordion-header" id="headersecurity">
@@ -617,8 +510,9 @@
                         <div class="dropdown-menu p-0 dropdown-menu-end dropdown-menu-lg">
                           <div class="search-box p-2">
                             <h6>Share public link to chat</h6>
-                            <p>Your name, custom instructions, and any messages you add after sharing stay private. <a href="#">Learn more</a></p>
-                            <input type="text"  class="form-control" readonly value="https://teamai.com/share/..." />
+                            <p>Your name, custom instructions, and any messages you add after sharing stay private. <a
+                                href="#">Learn more</a></p>
+                            <input type="text" class="form-control" readonly value="https://teamai.com/share/..." />
                             <!-- <input type="text" class="form-control" placeholder="Search.." id="searchChatMessage" /> -->
                           </div>
                         </div>
@@ -627,19 +521,19 @@
 
                     <li class="list-inline-item">
                       <div class="dropdown">
-                        <a href="#" class="flex-shrink-0 chat-user-img online user-own-img align-self-center me-3 ms-0" role="button" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                        <a href="#" class="flex-shrink-0 chat-user-img online user-own-img align-self-center me-3 ms-0"
+                          role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <img src="assets/favicon.ico" class="rounded-circle avatar-sm" alt="" />
                         </a>
                         <div class="dropdown-menu">
                           <a class="dropdown-item d-flex align-items-center justify-content-between" id="pills-user-tab"
                             data-bs-toggle="pill" href="#pills-user" role="tab">Profile <i
                               class="bx bx-user-circle text-muted ms-1"></i></a>
-                          <a class="dropdown-item d-flex align-items-center justify-content-between" id="pills-setting-tab"
-                            data-bs-toggle="pill" href="#pills-setting" role="tab">Setting <i
-                              class="bx bx-cog text-muted ms-1"></i></a>
                           <a class="dropdown-item d-flex align-items-center justify-content-between"
-                            href="#">Change Password
+                            id="pills-setting-tab" data-bs-toggle="pill" href="#pills-setting" role="tab">Setting <i
+                              class="bx bx-cog text-muted ms-1"></i></a>
+                          <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">Change
+                            Password
                             <i class="bx bx-lock-open text-muted ms-1"></i></a>
                           <div class="dropdown-divider"></div>
                           <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">Log out <i
@@ -656,15 +550,59 @@
             <!-- start chat conversation -->
 
             <div class="chat-conversation p-3 p-lg-4" id="chat-box" data-simplebar>
-              
-             </div>
+              <ul class="list-unstyled chat-conversation-list" id="users-conversation"></ul>
 
-            
+              <div class="chat-list left" id="10">
+                <div class="conversation-list">
+                  <div class="chat-avatar">
+                    <img src="assets/images/users/avatar-2.jpg" alt="">
+                  </div>
+                  <div class="user-chat-content">
+                    <div class="ctext-wrap">
+                      <div class="message-img mb-0">
+                        <div class="message-img-list">
+                          <p>
+                            Akuadaladsda
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="conversation-name">
+                      <small class="text-muted time">11:45 am</small>
+                      <span class="text-success check-message-icon"><i class="bx bx-check-double"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat-list right" id="11">
+                <div class="conversation-list">
+                  <div class="chat-avatar">
+                    <img src="assets/images/users/avatar-2.jpg" alt="">
+                  </div>
+                  <div class="user-chat-content">
+                    <div class="ctext-wrap">
+                      <div class="message-img mb-0">
+                        <div class="message-img-list">
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="conversation-name">
+                      <small class="text-muted time">11:45 am</small>
+                      <span class="text-success check-message-icon"><i class="bx bx-check-double"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
           </div>
 
           <!-- conversation group -->
-          
-          
+
+
           <!-- start chat input section -->
           <div class="position-relative">
             <div class="chat-input-section p-4 border-top">
@@ -679,14 +617,13 @@
                       <input autocomplete="off" type="text"
                         class="form-control form-control-lg bg-light border-0 chat-input" autofocus id="chat-input"
                         placeholder="Type your message..." />
-                    
+
                     </div>
                   </div>
                   <div class="col-auto">
                     <div class="chat-input-links ms-2 gap-md-1">
                       <div class="links-list-item">
-                        <button class="btn btn-primary"
-                          id="submit-btn">
+                        <button class="btn btn-primary" id="submit-btn">
                           <i class="bx bxs-send align-middle"></i>
                         </button>
                       </div>
@@ -745,7 +682,7 @@
 
   <script src="assets/js/app.js"></script>
 
- <script type="module" src="assets/js/chat.js"></script>
+  <script type="module" src="assets/js/chat.js"></script>
 </body>
 
 </html>
