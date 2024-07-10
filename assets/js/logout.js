@@ -13,7 +13,7 @@ const logout = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         deleteCookie("Authorization");
-        window.location.href = "https://tee-am-ai.github.io/frontend";
+        window.location.href = "./../signin.html";
       }
     });
   };
