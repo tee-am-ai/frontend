@@ -1,3 +1,5 @@
+login
+
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 
 function postLogin(target_url, data, responseFunction) {
@@ -18,7 +20,7 @@ const Login = () => {
     const target_url = "https://asia-southeast2-teeamai-427702.cloudfunctions.net/teeamai/login";
     
     const data = {
-        "username": getValue("username"),
+        "email": getValue("email"),
         "password": getValue("password"),
     };
     
@@ -32,7 +34,7 @@ function responseData(result) {
             title: "Login Successful",
             text: result.message,
         }).then(() => {
-            window.location.href = "https://tee-am-ai.github.io/frontend/dashboard.html";
+            window.location.href = "./../chat.html";
         });
     } else {
         Swal.fire({
