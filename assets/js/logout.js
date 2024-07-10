@@ -13,7 +13,7 @@ const logout = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         deleteCookie("Authorization");
-        window.location.href = "./../signin.html";
+        window.location.href = "./signin.html";
       }
     });
   };

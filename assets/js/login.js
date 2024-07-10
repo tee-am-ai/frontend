@@ -32,7 +32,7 @@ function responseData(result) {
             title: "Login Successful",
             text: result.message,
         }).then(() => {
-            window.location.href = "./../chat.html";
+            window.location.href = "./chat.html";
         });
     } else {
         Swal.fire({
