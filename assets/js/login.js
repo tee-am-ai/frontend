@@ -16,13 +16,10 @@ function postLogin(target_url, data, responseFunction) {
 
 const Login = () => {
     const target_url = "https://asia-southeast2-teeamai-427702.cloudfunctions.net/teeamai/login";
-    
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-    
+
     const data = {
-        "username": username,
-        "password": password,
+        "username": getValue("username"),
+        "password": getValue("password")
     };
     
     postLogin(target_url, data, responseData);
