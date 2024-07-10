@@ -34,7 +34,7 @@ function responseData (result) {
             title: "Register Successful",
             text: result.message,
         }).then(() => {
-            window.location.href = "https://tee-am-ai.github.io/frontend/signin.html";
+            window.location.href = "./../signin.html";
         });
     } else {
         Swal.fire({
