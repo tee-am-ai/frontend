@@ -9,8 +9,16 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 :root {
   scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -18,6 +26,112 @@ body {
   background: #f6f9ff;
   color: #444444;
 }
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.section.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-box {
+  flex: 1;
+  border: 1px solid rgb(246, 249, 255);
+  padding: 10px;
+  overflow-y: auto;
+  background-color: rgb(246, 249, 255);
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.bubble {
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  position: relative;
+}
+
+.user {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.user .bubble {
+  background-color: #aa00ff;
+  color: white;
+  border-bottom-right-radius: 0;
+  margin-left: 10px;
+}
+
+.user .profile-pic {
+  order: 2;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.bot .bubble {
+  background-color: #e9ecef;
+  color: black;
+  border-bottom-left-radius: 0;
+}
+
+#input-area {
+  display: flex;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#submit-btn {
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+
+
 
 a {
   color: #4154f1;
