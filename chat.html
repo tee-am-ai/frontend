@@ -1043,6 +1043,20 @@
         }
         return null;
       }
+      if (loginToken === null) {
+        Swal.fire({
+          icon: "warning",
+          title: "Akses Ditolak",
+          text: "Anda harus login terlebih dahulu agar bisa masuk ke halaman chat",
+          confirmButtonText: "OK",
+        }).then(() => {
+          window.location.href = "./signin.html";
+        });
+      } else {
+        // User is logged in, proceed to chat page or other logic
+        console.log("User is logged in, proceeding to chat page.");
+        // Add your logic here if needed when user is logged in
+      }
     </script>
 
     <!-- Konten halaman chat -->
