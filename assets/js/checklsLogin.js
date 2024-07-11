@@ -27,15 +27,13 @@ const Login = () => {
 
 function responseData(result) {
   if (result.error === undefined || !result.error) {
-    document.cookie = `Authorization=${encodeURIComponent(
-      result.token
-    )}; path=/;`;
-
     Swal.fire({
       icon: "success",
       title: "Login Successful",
       text: result.message,
     }).then(() => {
+      // Simpan status login pengguna di localStorage
+      localStorage.setItem("isLoggedIn", "true");
       window.location.href = "./chat.html";
     });
   } else {

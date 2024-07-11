@@ -8,12 +8,12 @@ function postChat(target_url, data, responseFunction) {
         redirect: 'follow'
     };
 
-    console.log("Sending data:", data); // Tambahkan log ini
+    console.log("Sending data:", data);
 
     fetch(target_url, requestOptions)
         .then(response => response.json())
         .then(result => {
-            console.log("Response from server:", result); // Tambahkan log ini
+            console.log("Response from server:", result);
             responseFunction(result);
         })
         .catch(error => console.log('error', error));
@@ -23,9 +23,12 @@ function responseData(result) {
     const chatBox = document.getElementById("chat-box");
     const botMessage = document.createElement("div");
     botMessage.className = "message bot";
-    botMessage.textContent = result.answer || result.message || "No response"; // Tampilkan pesan kesalahan jika ada
+    botMessage.innerHTML = `
+        <img src="assets/landingpages/images/logo kecik.png" alt="Bot" class="profile-pic" />
+        <div class="bubble">${result.answer || result.message || "No response"}</div>
+    `;
     chatBox.appendChild(botMessage);
-    chatBox.scrollTop = chatBox.scrollHeight; // Scroll ke bawah
+    chatBox.scrollTop = chatBox.scrollHeight;
 }
 
 const Chat = () => {
@@ -35,16 +38,19 @@ const Chat = () => {
     if (userInput.trim() !== "") {
         const userMessage = document.createElement("div");
         userMessage.className = "message user";
-        userMessage.textContent = userInput;
+        userMessage.innerHTML = `
+            <img src="assets/images/user-icon.jpg" alt="User" class="profile-pic" />
+            <div class="bubble">${userInput}</div>
+        `;
         chatBox.appendChild(userMessage);
 
         const target_url = "https://asia-southeast2-teeamai-427702.cloudfunctions.net/teeamai/chat";
-        const data = { query: userInput }; // Ubah menjadi { query: userInput }
+        const data = { query: userInput };
 
         postChat(target_url, data, responseData);
 
-        document.getElementById("chat-input").value = ""; // Bersihkan field input
-        chatBox.scrollTop = chatBox.scrollHeight; // Scroll ke bawah
+        document.getElementById("chat-input").value = "";
+        chatBox.scrollTop = chatBox.scrollHeight;
     }
 }
 
@@ -54,4 +60,3 @@ document.getElementById("chat-input").addEventListener("keypress", function(even
         Chat();
     }
 });
-
