@@ -55,7 +55,7 @@ const Chat = () => {
 }
 
 document.getElementById("submit-btn").addEventListener("click", Chat);
-document.getElementById("chat-input").addEventListener("keypress", function(event) {
+document.getElementById("chat-input").addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         Chat();
     }
