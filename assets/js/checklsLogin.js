@@ -32,7 +32,7 @@ function responseData(result) {
       title: "Login Successful",
       text: result.message,
     }).then(() => {
-      // Simpan token atau status login di localStorage
+      // Simpan status login pengguna di localStorage
       localStorage.setItem("isLoggedIn", "true");
       window.location.href = "./chat.html";
     });
