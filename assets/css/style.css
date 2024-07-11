@@ -125,14 +125,18 @@ body {
 #submit-btn {
   padding: 10px;
   border: none;
-  background-color: #007bff;
+  background-color: #9900ff;
   color: white;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 5px;
+  transition: background-color 0.3s ease;
 }
 
-
+/* Gaya saat tombol sedang disorot */
+#submit-btn:hover {
+  background-color: #0059ff; /* Warna latar belakang ungu yang lebih gelap */
+}
 
 
 a {
