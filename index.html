@@ -713,73 +713,6 @@
     </section>
     <!-- ===== Services End ===== -->
 
-    <!-- ===== Pricing Table Start ===== -->
-    <section x-data="setup()" class="i pg fh rm ji gp uq">
-      <!-- Bg Shapes -->
-      <img src="assets/landingpages/images/shape-06.svg" alt="Shape" class="h aa y" />
-      <img src="assets/landingpages/images/shape-03.svg" alt="Shape" class="h ca u" />
-      <img src="assets/landingpages/images/shape-07.svg" alt="Shape" class="h w da ee" />
-      <img src="assets/landingpages/images/shape-12.svg" alt="Shape" class="h p s" />
-      <img src="assets/landingpages/images/shape-13.svg" alt="Shape" class="h r q" />
-
-      <!-- Section Title Start -->
-      <div
-        x-data="{ sectionTitle: `Harga Premium yang Terjangkau`, sectionTitleText: `Kami menawarkan harga yang kompetitif tanpa mengorbankan kualitas. Temukan solusi berharga yang memenuhi kebutuhan Anda.`}">
-        <div class="animate_top bb ze rj ki xn vq">
-          <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b"></h2>
-          <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-        </div>
-      </div>
-      <!-- Section Title End -->
-
-      <!-- Pricing switcher -->
-      <div class="tc wf xf jb og">
-        <span class="ek kk wm">Bill Monthly</span>
-        <button class="i rg gm" x-cloak @click="billPlan == 'monthly' ? billPlan = 'annually' : billPlan = 'monthly'">
-          <div class="fe id bl gh rg xk outline-none"></div>
-          <div class="h vc wf xf ge jd cl jl ml mf hh rg yk ea fa"
-            :class="{ 'ff': billPlan == 'monthly', 'gf': billPlan == 'annually' }"></div>
-        </button>
-        <span class="ek kk wm">Bill Annually</span>
-      </div>
-
-      <!-- Pricing Table -->
-      <div class="bb ze i va ki xn yq bc">
-        <div class="wc qf pn xo jg">
-          <template x-for="(plan, i) in plans" x-key="i">
-            <!-- Pricing Item -->
-            <div class="animate_top rj sg hh sm vk xm hi nj oj">
-              <h4 x-text="plan.name" class="wj kk wm fb"></h4>
-
-              <div class="tc wf xf kg cc">
-                <h2 :class="plan.name == 'Basic' ? 'text-green-500' : ''"
-                  x-text="`$${billPlan == 'monthly' ? plan.price.monthly : plan.price.annually}`" class="fk _j kk wm">
-                </h2>
-                <span x-text="billPlan == 'monthly' ? '/per month' : '/per year'" class="sc ak kk wm"></span>
-              </div>
-
-              <p class="ur dc">No credit card required</p>
-
-              <!-- Button -->
-              <a href="#" class="ek rg lk ml il gi ri" :class="plan.name == 'Growth Plan' ? 'gh sl' : 'mh tl'">
-                Try for free
-              </a>
-
-              <!-- Features -->
-              <ul class="tc sf bg ob fb">
-                <template x-for="(feature, i) in plan.features" x-key="i">
-                  <li x-text="feature"></li>
-                </template>
-              </ul>
-
-              <p class="kk wm">7-day free trial</p>
-            </div>
-          </template>
-        </div>
-      </div>
-    </section>
-    <!-- ===== Pricing Table End ===== -->
-
     <!-- ===== Projects Start ===== -->
     <section class="pg pj vp mr oj wp nr">
       <!-- Section Title Start -->
@@ -1042,21 +975,21 @@
     <!-- ===== Clients End ===== -->
 
     <!-- ===== Blog Start ===== -->
-    <section class="ji gp uq">
+    <!-- <section class="ji gp uq"> -->
       <!-- Section Title Start -->
-      <div
+      <!-- <div
         x-data="{ sectionTitle: `Artikel Terbaru & Berita Terkini`, sectionTitleText: `Jelajahi artikel-artikel terbaru dan berita terkini untuk tetap update dengan informasi terkini dan tren terbaru.`}">
         <div class="animate_top bb ze rj ki xn vq">
           <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b"></h2>
           <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
         </div>
-      </div>
+      </div> -->
       <!-- Section Title End -->
 
-      <div class="bb ye ki xn vq jb jo">
-        <div class="wc qf pn xo zf iq">
+      <!-- <div class="bb ye ki xn vq jb jo">
+        <div class="wc qf pn xo zf iq"> -->
           <!-- Blog Item -->
-          <div class="animate_top sg vk rm xm">
+          <!-- <div class="animate_top sg vk rm xm">
             <div class="c rc i z-1 pg">
               <img class="w-full" src="assets/landingpages/images/blog-01.png" alt="Blog" />
 
@@ -1080,10 +1013,10 @@
                 <a href="blog-single.html">Free advertising for your online business</a>
               </h4>
             </div>
-          </div>
+          </div> -->
 
           <!-- Blog Item -->
-          <div class="animate_top sg vk rm xm">
+          <!-- <div class="animate_top sg vk rm xm">
             <div class="c rc i z-1 pg">
               <img class="w-full" src="assets/landingpages/images/blog-02.png" alt="Blog" />
 
@@ -1107,10 +1040,10 @@
                 <a href="blog-single.html">9 simple ways to improve your design skills</a>
               </h4>
             </div>
-          </div>
+          </div> -->
 
           <!-- Blog Item -->
-          <div class="animate_top sg vk rm xm">
+          <!-- <div class="animate_top sg vk rm xm">
             <div class="c rc i z-1 pg">
               <img class="w-full" src="assets/landingpages/images/blog-03.png" alt="Blog" />
 
@@ -1137,7 +1070,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- ===== Blog End ===== -->
 
     <!-- ===== Contact Start ===== -->
@@ -1272,9 +1205,9 @@
     <!-- ===== Contact End ===== -->
 
     <!-- ===== CTA Start ===== -->
-    <section class="i pg gh ji">
+    <!-- <section class="i pg gh ji"> -->
       <!-- Bg Shape -->
-      <img class="h p q" src="assets/landingpages/images/shape-16.svg" alt="Bg Shape" />
+      <!-- <img class="h p q" src="assets/landingpages/images/shape-16.svg" alt="Bg Shape" />
 
       <div class="bb ye i z-10 ki xn dr">
         <div class="tc uf sn tn un gg">
@@ -1294,7 +1227,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ===== CTA End ===== -->
   </main>
