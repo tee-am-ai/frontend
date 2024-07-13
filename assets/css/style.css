@@ -116,6 +116,7 @@ body {
   margin-top: 10px;
   margin-right: 32px;
   margin-left: 335px;
+  border-radius: 10px;
 }
 
 #chat-input {
@@ -129,18 +130,120 @@ body {
 #submit-btn {
   padding: 10px;
   border: none;
-  background-color: #9900ff;
+  background-color: #8400ff;
   color: white;
   border-radius: 5px;
   cursor: pointer;
   width: 80px;
   margin-left: 5px;
   transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Dark mode styles for specific icons */
+body.dark-mode .bi-list,
+body.dark-mode .dropdown-toggle {
+  color: #ffffff;
+}
+
+/* Ensure the user profile image is properly visible in dark mode */
+body.dark-mode .nav-profile img {
+  border: 1px solid #ffffff;
+}
+
+/* Dark mode styles for input area, placeholder text, and new chat link */
+body.dark-mode #chat-input {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #555555;
+}
+
+body.dark-mode #chat-input::placeholder {
+  color: #cccccc;
+}
+
+body.dark-mode #input-area {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .new-chat {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .new-chat i {
+  color: #ffffff;
+}
+
+body.dark-mode .new-chat span{
+  color: #ffffff;
+}
+
+body.dark-mode .new-chat:hover {
+  background-color: #555555; /* Grey background on hover */
+  color: #ffffff; /* Ensure text remains white */
+}
+
+body.dark-mode .new-chat:hover i {
+  color: #ffffff; /* Ensure icon remains white */
+}
+
+
+.header.dark-mode, 
+.sidebar.dark-mode, 
+#main.dark-mode {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+.chat-content-area.dark-mode {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+#chat-box.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+.message.bot .bubble.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.message.user .bubble.dark-mode {
+  background-color: #ffffff;
+  color: #000;
+}
+
+#input-area.dark-mode {
+  background-color: #1f1f1f;
+}
+
+#chat-input.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #555555;
+}
+
+#submit-btn.dark-mode {
+  background-color: #8400ff;
+  color: #ffffff;
+}
+
+#submit-btn.dark-mode:hover {
+  background-color: #b648ff;
 }
 
 /* Gaya saat tombol sedang disorot */
 #submit-btn:hover {
-  background-color: #0059ff; /* Warna latar belakang ungu yang lebih gelap */
+  background-color: #b648ff; /* Warna latar belakang ungu yang lebih gelap */
 }
 
 
