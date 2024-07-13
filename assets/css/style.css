@@ -193,6 +193,36 @@ body.dark-mode .new-chat:hover i {
   color: #ffffff; /* Ensure icon remains white */
 }
 
+/* Dark mode styles for the dropdown menu and its items */
+body.dark-mode .dropdown-menu {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #555555;
+}
+
+body.dark-mode .dropdown-menu .dropdown-header {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+body.dark-mode .dropdown-menu .dropdown-header h6 {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+body.dark-mode .dropdown-menu .dropdown-item {
+  color: #ffffff;
+}
+
+body.dark-mode .dropdown-menu .dropdown-item:hover {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+body.dark-mode .dropdown-menu .dropdown-divider {
+  border-color: #555555;
+}
+
 
 .header.dark-mode, 
 .sidebar.dark-mode, 
