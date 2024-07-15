@@ -145,6 +145,33 @@ body.dark-mode {
   color: #ffffff;
 }
 
+/* Dark mode styles for accordion button */
+body.dark-mode .accordion-button {
+  color: #ffffff;
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .accordion-button::after {
+  filter: invert(1); /* This will invert the arrow color to white */
+}
+
+body.dark-mode .accordion-button:not(.collapsed)::after {
+  filter: invert(1); /* This will ensure the arrow color remains white when expanded */
+}
+
+body.dark-mode .header, 
+body.dark-mode .sidebar, 
+body.dark-mode .nav-profile, 
+body.dark-mode .accordion-button {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+body.dark-mode .accordion-body {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
 /* Dark mode styles for specific icons */
 body.dark-mode .bi-list,
 body.dark-mode .dropdown-toggle {
@@ -179,7 +206,7 @@ body.dark-mode .new-chat i {
   color: #ffffff;
 }
 
-body.dark-mode .new-chat span{
+body.dark-mode .new-chat span {
   color: #ffffff;
 }
 
@@ -221,7 +248,6 @@ body.dark-mode .dropdown-menu .dropdown-item:hover {
 body.dark-mode .dropdown-menu .dropdown-divider {
   border-color: #555555;
 }
-
 
 .header.dark-mode, 
 .sidebar.dark-mode, 
@@ -274,6 +300,7 @@ body.dark-mode .dropdown-menu .dropdown-divider {
 #submit-btn:hover {
   background-color: #b648ff; /* Warna latar belakang ungu yang lebih gelap */
 }
+
 
 
 a {
