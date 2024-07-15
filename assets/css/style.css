@@ -141,14 +141,14 @@ body {
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: #121212;
+  background-color: #1B1E38 ;
   color: #ffffff;
 }
 
 /* Dark mode styles for accordion button */
 body.dark-mode .accordion-button {
   color: #ffffff;
-  background-color: #1f1f1f;
+  background-color: #282C40 ;
 }
 
 body.dark-mode .accordion-button::after {
@@ -163,12 +163,12 @@ body.dark-mode .header,
 body.dark-mode .sidebar, 
 body.dark-mode .nav-profile, 
 body.dark-mode .accordion-button {
-  background-color: #1f1f1f;
+  background-color: #282C40 ;
   color: #ffffff;
 }
 
 body.dark-mode .accordion-body {
-  background-color: #2a2a2a;
+  background-color: #181C31;
   color: #ffffff;
 }
 
@@ -185,7 +185,7 @@ body.dark-mode .nav-profile img {
 
 /* Dark mode styles for input area, placeholder text, and new chat link */
 body.dark-mode #chat-input {
-  background-color: #333333;
+  background-color: #181C31;
   color: #ffffff;
   border: 1px solid #555555;
 }
@@ -195,11 +195,11 @@ body.dark-mode #chat-input::placeholder {
 }
 
 body.dark-mode #input-area {
-  background-color: #1f1f1f;
+  background-color: #282C40 ;
 }
 
 body.dark-mode .new-chat {
-  background-color: #1f1f1f;
+  background-color: #282C40 ;
 }
 
 body.dark-mode .new-chat i {
@@ -211,7 +211,7 @@ body.dark-mode .new-chat span {
 }
 
 body.dark-mode .new-chat:hover {
-  background-color: #555555; /* Grey background on hover */
+  background-color: #4E6BFF; /* Grey background on hover */
   color: #ffffff; /* Ensure text remains white */
 }
 
@@ -221,18 +221,13 @@ body.dark-mode .new-chat:hover i {
 
 /* Dark mode styles for the dropdown menu and its items */
 body.dark-mode .dropdown-menu {
-  background-color: #333333;
+  background-color: #181C31;
   color: #ffffff;
   border: 1px solid #555555;
 }
 
-body.dark-mode .dropdown-menu .dropdown-header {
-  background-color: #444444;
-  color: #ffffff;
-}
-
 body.dark-mode .dropdown-menu .dropdown-header h6 {
-  background-color: #444444;
+  background-color: #181C31;
   color: #ffffff;
 }
 
@@ -241,7 +236,7 @@ body.dark-mode .dropdown-menu .dropdown-item {
 }
 
 body.dark-mode .dropdown-menu .dropdown-item:hover {
-  background-color: #555555;
+  background-color: #4E6BFF;
   color: #ffffff;
 }
 
@@ -252,23 +247,23 @@ body.dark-mode .dropdown-menu .dropdown-divider {
 .header.dark-mode, 
 .sidebar.dark-mode, 
 #main.dark-mode {
-  background-color: #1f1f1f;
+  background-color: #282C40 ;
   color: #ffffff;
 }
 
 .chat-content-area.dark-mode {
-  background-color: #1f1f1f;
+  background-color: #282C40 ;
   color: #ffffff;
 }
 
 #chat-box.dark-mode {
-  background-color: #121212;
+  background-color: #1B1E38;
   color: #ffffff;
-  border: 1px solid #333333;
+  border: 1px solid #181C31;
 }
 
 .message.bot .bubble.dark-mode {
-  background-color: #333333;
+  background-color: #4E6BFF;
   color: #ffffff;
 }
 
@@ -278,11 +273,11 @@ body.dark-mode .dropdown-menu .dropdown-divider {
 }
 
 #input-area.dark-mode {
-  background-color: #1f1f1f;
+  background-color: #282C40 ;
 }
 
 #chat-input.dark-mode {
-  background-color: #333333;
+  background-color: #181C31;
   color: #ffffff;
   border: 1px solid #555555;
 }
