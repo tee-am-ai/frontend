@@ -61,7 +61,7 @@ document.getElementById("chat-input").addEventListener("keypress", function (eve
     }
 });
 
-  document.getElementById('toggle-dark-mode').addEventListener('click', function() {
+document.getElementById('toggle-dark-mode').addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
     document.querySelector('.header').classList.toggle('dark-mode');
     document.querySelector('.sidebar').classList.toggle('dark-mode');
@@ -71,13 +71,13 @@ document.getElementById("chat-input").addEventListener("keypress", function (eve
     document.querySelector('#input-area').classList.toggle('dark-mode');
     document.querySelector('#chat-input').classList.toggle('dark-mode');
     document.querySelector('#submit-btn').classList.toggle('dark-mode');
-    
-    document.querySelectorAll('.bi').forEach(function(icon) {
-      icon.classList.toggle('dark-mode');
+
+    document.querySelectorAll('.bi').forEach(function (icon) {
+        icon.classList.toggle('dark-mode');
     });
 
-    document.querySelectorAll('.bubble').forEach(function(bubble) {
-      bubble.classList.toggle('dark-mode');
+    document.querySelectorAll('.bubble').forEach(function (bubble) {
+        bubble.classList.toggle('dark-mode');
     });
 
     // Toggle dark mode for specific icons
@@ -89,6 +89,5 @@ document.getElementById("chat-input").addEventListener("keypress", function (eve
 
     // Toggle dark mode for dropdown menu
     document.querySelector('.dropdown-menu').classList.toggle('dark-mode');
-  });
+});
 
-  
