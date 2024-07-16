@@ -59,6 +59,7 @@ body {
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  transition: margin-left 0.3s ease;
   margin-bottom: 50px;
 }
 
@@ -129,6 +130,7 @@ body {
 @media (max-width: 1199px) {
   #input-area {
     margin-left: 32px;
+    margin-right: 0;
   }
 }
 
