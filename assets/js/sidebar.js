@@ -14,8 +14,8 @@ sidebarCollapse.addEventListener("click", function () {
       chatBox.style.marginLeft = "335px";
       backToTop.style.right = "49%";
     } else {
-      inputArea.style.marginLeft = "32px";
-      chatBox.style.marginLeft = "32px";
+      inputArea.style.marginLeft = "0";
+      chatBox.style.marginLeft = "0";
       backToTop.style.right = "41%";
     }
   } else {
