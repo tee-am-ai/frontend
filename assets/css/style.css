@@ -66,7 +66,7 @@ body {
 @media (max-width: 1199px) {
   #chat-box {
     transition: margin-left 0.3s ease;
-    margin-left: 32px;
+    margin-left: 0;
   }
 }
 
@@ -123,13 +123,13 @@ body {
   transition: margin-left 0.3s ease;
   margin-top: 10px;
   margin-right: 32px;
-  margin-left: 335px;
+  margin-left: 35px;
   border-radius: 10px;
 }
 
 @media (max-width: 1199px) {
   #input-area {
-    margin-left: 32px;
+    margin-left: 0;
     margin-right: 0;
   }
 }
