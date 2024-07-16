@@ -6,7 +6,16 @@ const chatBox = document.getElementById("chat-box");
 
 sidebarCollapse.addEventListener("click", function () {
   const screenWidth = window.innerWidth;
-  const active = sidebar.classList.toggle("active");
+  let active = sidebar.classList.contains("active");
+
+  // Toggle kelas "active" pada sidebar
+  if (active) {
+    sidebar.classList.remove("active");
+  } else {
+    sidebar.classList.add("active");
+  }
+
+  active = sidebar.classList.contains("active");
 
   if (screenWidth <= 1199) {
     if (active) {
@@ -21,9 +30,11 @@ sidebarCollapse.addEventListener("click", function () {
   } else {
     if (active) {
       inputArea.style.marginLeft = "32px";
+      chatBox.style.marginLeft = "32px";
       backToTop.style.right = "49%";
     } else {
       inputArea.style.marginLeft = "335px";
+      chatBox.style.marginLeft = "0";
       backToTop.style.right = "41%";
     }
   }
