@@ -8,7 +8,6 @@ sidebarCollapse.addEventListener("click", function () {
   const screenWidth = window.innerWidth;
   let active = sidebar.classList.contains("active");
 
-  // Toggle kelas "active" pada sidebar
   if (active) {
     sidebar.classList.remove("active");
   } else {
