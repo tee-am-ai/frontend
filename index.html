@@ -49,7 +49,7 @@
               <a href="index.html" class="xl" :class="{ 'mk': page === 'home' }">Home</a>
             </li>
             <li><a href="index.html#features" class="xl">About</a></li>
-            <li class="c i" x-data="{ dropdown: false }">
+            <!-- <li class="c i" x-data="{ dropdown: false }">
               <a href="#" class="xl tc wf yf bg" @click.prevent="dropdown = !dropdown"
                 :class="{ 'mk': page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }">
                 Pages
@@ -61,7 +61,6 @@
                 </svg>
               </a>
 
-              <!-- Dropdown Start -->
               <ul class="a" :class="{ 'tc': dropdown }">
                 <li>
                   <a href="signin.html" class="xl" :class="{ 'mk': page === 'signin' }">Sign In</a>
@@ -73,8 +72,7 @@
                   <a href="404.html" class="xl" :class="{ 'mk': page === '404' }">404</a>
                 </li>
               </ul>
-              <!-- Dropdown End -->
-            </li>
+            </li> -->
             <li><a href="index.html#support" class="xl">FAQ</a></li>
           </ul>
         </nav>
