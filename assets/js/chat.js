@@ -24,7 +24,7 @@ function responseData(result) {
     const botMessage = document.createElement("div");
     botMessage.className = "message bot";
     botMessage.innerHTML = `
-        <img src="assets/landingpages/images/logo kecik.png" alt="Bot" class="profile-pic" />
+        <img src="assets/images/logo kecik.png" alt="Bot" class="profile-pic" />
         <div class="bubble">${result.answer || result.message || "No response"}</div>
     `;
     chatBox.appendChild(botMessage);
