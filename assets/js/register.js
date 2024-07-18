@@ -16,18 +16,18 @@ function postRegister(target_url, data, responseFunction) {
 
 const Register = () => {
     const target_url = "https://asia-southeast2-teeamai-427702.cloudfunctions.net/teeamai/signup";
-    
+
     const data = {
-        "namalengkap" : getValue("namalengkap"),
+        "namalengkap": getValue("namalengkap"),
         "email": getValue("email"),
         "password": getValue("password"),
         "confirmpass": getValue("confirmpass"),
     };
-    
+
     postRegister(target_url, data, responseData);
 }
 
-function responseData (result) {
+function responseData(result) {
     if (result.error === undefined || !result.error) {
         Swal.fire({
             icon: "success",
@@ -47,27 +47,33 @@ function responseData (result) {
 
 document.getElementById("button1").addEventListener("click", Register);
 
+// Add event listener for Enter key press
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        Register();
+    }
+});
 
 // function Show Password 
 
 function togglePassword(inputId, iconId) {
-  var passwordInput = document.getElementById(inputId);
-  var eyeIcon = document.getElementById(iconId);
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-    eyeIcon.classList.remove("fa-eye");
-    eyeIcon.classList.add("fa-eye-slash");
-  } else {
-    passwordInput.type = "password";
-    eyeIcon.classList.remove("fa-eye-slash");
-    eyeIcon.classList.add("fa-eye");
-  }
+    var passwordInput = document.getElementById(inputId);
+    var eyeIcon = document.getElementById(iconId);
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+    } else {
+        passwordInput.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+    }
 }
 
 document.getElementById("toggle-password").addEventListener("click", function () {
-  togglePassword("password", "eye-icon-password");
+    togglePassword("password", "eye-icon-password");
 });
 
 document.getElementById("toggle-confirmpass").addEventListener("click", function () {
-  togglePassword("confirmpass", "eye-icon-confirmpass");
+    togglePassword("confirmpass", "eye-icon-confirmpass");
 });
