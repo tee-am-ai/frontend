@@ -152,15 +152,21 @@
                 class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40" style="padding-right: 30px;" />
               <span id="toggle-password"
                 style="position: absolute; right: 5%; top: 50%; transform: translateY(-50%); cursor: pointer;">
-                <i id="eye-icon" class="fa fa-eye"></i>
+                <i id="eye-icon-password" class="fa fa-eye"></i>
               </span>
             </div>
           </div>
 
           <div class="wb">
-            <label class="rc kk wm vb" for="password">Confirm Password</label>
-            <input type="password" name="confirmpassword" id="confirmpass" placeholder="**************"
-              class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40" />
+            <label class="rc kk wm vb" for="confirmpass">Confirm Password</label>
+            <div class="password-wrapper" style="position: relative;">
+              <input type="password" name="confirmpassword" id="confirmpass" placeholder="**************"
+                class="vd hh rg zk _g ch hm dm fm pl/50 xi mi sm xm pm dn/40" style="padding-right: 30px;" />
+              <span id="toggle-confirmpass"
+                style="position: absolute; right: 5%; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                <i id="eye-icon-confirmpass" class="fa fa-eye"></i>
+              </span>
+            </div>
           </div>
 
           <button type="button" class="vd rj ek rc rg gh lk ml il _l gi hi" id="button1">Sign Up</button>
@@ -188,9 +194,9 @@
   <script defer src="assets/landingpages/bundle.js"></script>
   <script type="module" src="assets/js/register.js"></script>
   <script>
-    function togglePassword() {
-      var passwordInput = document.getElementById("password");
-      var eyeIcon = document.getElementById("eye-icon");
+    function togglePassword(inputId, iconId) {
+      var passwordInput = document.getElementById(inputId);
+      var eyeIcon = document.getElementById(iconId);
       if (passwordInput.type === "password") {
         passwordInput.type = "text";
         eyeIcon.classList.remove("fa-eye");
@@ -202,8 +208,15 @@
       }
     }
 
-    document.getElementById("toggle-password").addEventListener("click", togglePassword);
+    document.getElementById("toggle-password").addEventListener("click", function () {
+      togglePassword("password", "eye-icon-password");
+    });
+
+    document.getElementById("toggle-confirmpass").addEventListener("click", function () {
+      togglePassword("confirmpass", "eye-icon-confirmpass");
+    });
   </script>
+
 </body>
 
 </html>
