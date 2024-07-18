@@ -126,6 +126,7 @@ body {
   margin-right: 32px;
   margin-left: 335px;
   border-radius: 10px;
+  gap: 10px;
 }
 
 @media (max-width: 1199px) {
