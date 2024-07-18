@@ -169,26 +169,6 @@
   <!-- ====== Back To Top End ===== -->
   <script defer src="assets/landingpages/bundle.js"></script>
   <script type="module" src="assets/js/login.js"></script>
-
-
-
-<script>
-function togglePassword() {
-    var passwordInput = document.getElementById("password");
-    var eyeIcon = document.getElementById("eye-icon");
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        eyeIcon.classList.remove("fa-eye");
-        eyeIcon.classList.add("fa-eye-slash");
-    } else {
-        passwordInput.type = "password";
-        eyeIcon.classList.remove("fa-eye-slash");
-        eyeIcon.classList.add("fa-eye");
-    }
-}
-
-document.getElementById("toggle-password").addEventListener("click", togglePassword);
-</script>
 </body>
 
 </html>
