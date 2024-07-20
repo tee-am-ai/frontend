@@ -15,7 +15,7 @@ function postRegister(target_url, data, responseFunction) {
 }
 
 const Register = () => {
-    const target_url = "https://asia-southeast2-teeamai-427702.cloudfunctions.net/teeamai/signup";
+    const target_url = "https://api-tee-am-ai.up.railway.app/signup";
 
     const data = {
         "namalengkap": getValue("namalengkap"),
