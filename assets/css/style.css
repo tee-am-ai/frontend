@@ -85,16 +85,17 @@ body {
 }
 
 .bubble {
-  max-width: 80%;
+  max-width: 40%;
   padding: 10px;
   border-radius: 10px;
   font-size: 14px;
   position: relative;
+  word-wrap: break-word;
 }
 
 .user {
   justify-content: flex-end;
-  text-align: right;
+  text-align: left;
 }
 
 .user .bubble {
