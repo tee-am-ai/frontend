@@ -280,13 +280,13 @@ body.dark-mode .dropdown-menu .dropdown-divider {
 }
 
 .message.bot .bubble.dark-mode {
-  background-color: #4E6BFF;
-  color: #ffffff;
+  background-color: #ffff;
+  color: #000;
 }
 
 .message.user .bubble.dark-mode {
-  background-color: #ffffff;
-  color: #000;
+  background-color: #4E6BFF;
+  color: #fff;
 }
 
 #input-area.dark-mode {
