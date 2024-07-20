@@ -15,7 +15,7 @@ function postLogin(target_url, data, responseFunction) {
 
 const Login = () => {
   const target_url =
-    "https://api-tee-am-ai.up.railway.app/login";
+    "https://asia-southeast2-teeamai-427702.cloudfunctions.net/teeamai/login";
 
   const data = {
     email: getValue("email"),
