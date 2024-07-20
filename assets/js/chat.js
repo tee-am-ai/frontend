@@ -44,7 +44,7 @@ const Chat = () => {
         `;
         chatBox.appendChild(userMessage);
 
-        const target_url = "https://asia-southeast2-teeamai-427702.cloudfunctions.net/teeamai/chat";
+        const target_url = "https://api-tee-am-ai.up.railway.app/chat";
         const data = { query: userInput };
 
         postChat(target_url, data, responseData);
