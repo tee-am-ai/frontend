@@ -55,9 +55,22 @@ const Chat = () => {
 }
 
 document.getElementById("submit-btn").addEventListener("click", Chat);
+
 document.getElementById("chat-input").addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();  // Prevents the default action of the enter key
         Chat();
+    }
+});
+
+document.getElementById("chat-input").addEventListener("keydown", function (event) {
+    if (event.key === "Enter" && event.shiftKey) {
+        // Allows Enter+Shift to create a new line in the textarea
+        const cursorPosition = this.selectionStart;
+        this.value = this.value.substring(0, cursorPosition) + "\n" + this.value.substring(cursorPosition);
+        this.selectionStart = cursorPosition + 1;
+        this.selectionEnd = cursorPosition + 1;
+        event.preventDefault();
     }
 });
 
@@ -80,14 +93,8 @@ document.getElementById('toggle-dark-mode').addEventListener('click', function (
         bubble.classList.toggle('dark-mode');
     });
 
-    
     document.querySelector('.toggle-sidebar-btn').classList.toggle('dark-mode');
     document.querySelector('.dropdown-toggle').classList.toggle('dark-mode');
-
-    
     document.querySelector('.new-chat').classList.toggle('dark-mode');
-
-    
     document.querySelector('.dropdown-menu').classList.toggle('dark-mode');
 });
-
