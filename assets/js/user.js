@@ -10,46 +10,63 @@ function getCookie(name) {
     return null;
 }
 
-// Get the login token from cookies
-const loginToken = getCookie("Authorization");
+function getUser(target_url, responseFunction) {
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", getCookie("Authorization"));
 
-// Check if the user is logged in
-if (loginToken === null) {
-    Swal.fire({
-        icon: "warning",
-        title: "Akses Ditolak",
-        text: "Anda harus login terlebih dahulu agar bisa masuk ke halaman chat",
-        confirmButtonText: "OK",
-    }).then(() => {
-        window.location.href = "./signin.html";
-    });
-} else {
-    console.log("User is logged in, proceeding to fetch user data.");
-    fetchAndDisplayUserData(loginToken);
+    const requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
+
+    fetch(target_url, requestOptions)
+        .then(response => response.text())
+        .then(result => responseFunction(JSON.parse(result)))
+        .catch(error => console.log('error', error));
 }
 
-// Function to fetch and display user data
-async function fetchAndDisplayUserData(token) {
-    const apiUrl = "https://api-tee-am-ai.up.railway.app/user";
+const apiUrl = "https://api-tee-am-ai.up.railway.app/user";
 
-    try {
-        const response = await fetch(apiUrl, {
-            headers: {
-                "Authorization": `Bearer ${token}`
-            }
-        });
+function displayUserData(data) {
+    // Display the fetched username and email
+    document.getElementById("username-display").textContent = data.data.namalengkap;
+    document.getElementById("email-display").textContent = data.data.email;
+}
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log("User data:", data);
-
-        // Display the fetched username and email
-        document.getElementById("username-display").textContent = `Username: ${data.username}`;
-        document.getElementById("email-display").textContent = `Email: ${data.email}`;
-    } catch (error) {
-        console.error("Error fetching user data:", error);
+function responseUserData(result) {
+    if (result.error === undefined || !result.error) {
+        displayUserData(result);
+    } else {
+        console.error("Error fetching user data:", result.message);
     }
 }
+
+getUser(apiUrl, responseUserData);
+
+// Function to fetch and display user data
+// async function fetchAndDisplayUserData() {
+//     const myHeaders = new Headers();
+//     myHeaders.append("Authorization", getCookie("Authorization"));
+
+//     const apiUrl = "https://api-tee-am-ai.up.railway.app/user";
+
+//     try {
+//         const response = await fetch(apiUrl, {
+//             headers: myHeaders,
+//         });
+
+//         if (!response.ok) {
+//             throw new Error(HTTP error! status: ${response.status});
+//         }
+
+//         const data = await response.json();
+//         console.log("User data:", data);
+
+//         // Display the fetched username and email
+//         document.getElementById("username-display").textContent = Username: ${data.username};
+//         document.getElementById("email-display").textContent = Email: ${data.email};
+//     } catch (error) {
+//         console.error("Error fetching user data:", error);
+//     }
+// }
