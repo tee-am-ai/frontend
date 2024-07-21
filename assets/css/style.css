@@ -203,18 +203,15 @@ body.dark-mode .accordion-body {
   color: #ffffff;
 }
 
-/* Dark mode styles for specific icons */
 body.dark-mode .bi-list,
 body.dark-mode .dropdown-toggle {
   color: #ffffff;
 }
 
-/* Ensure the user profile image is properly visible in dark mode */
 body.dark-mode .nav-profile img {
   border: 1px solid #ffffff;
 }
 
-/* Dark mode styles for input area, placeholder text, and new chat link */
 body.dark-mode #chat-input {
   background-color: #181C31;
   color: #ffffff;
@@ -242,15 +239,14 @@ body.dark-mode .new-chat span {
 }
 
 body.dark-mode .new-chat:hover {
-  background-color: #4E6BFF; /* Grey background on hover */
-  color: #ffffff; /* Ensure text remains white */
+  background-color: #4E6BFF;
+  color: #ffffff;
 }
 
 body.dark-mode .new-chat:hover i {
-  color: #ffffff; /* Ensure icon remains white */
+  color: #ffffff;
 }
 
-/* Dark mode styles for the dropdown menu and its items */
 body.dark-mode .dropdown-menu {
   background-color: #181C31;
   color: #ffffff;
@@ -322,12 +318,9 @@ body.dark-mode .dropdown-menu .dropdown-divider {
   background-color: #b648ff;
 }
 
-/* Gaya saat tombol sedang disorot */
 #submit-btn:hover {
-  background-color: #b648ff; /* Warna latar belakang ungu yang lebih gelap */
+  background-color: #b648ff;
 }
-
-
 
 a {
   color: #4154f1;
