@@ -80,14 +80,14 @@ document.getElementById('toggle-dark-mode').addEventListener('click', function (
         bubble.classList.toggle('dark-mode');
     });
 
-    // Toggle dark mode for specific icons
+    
     document.querySelector('.toggle-sidebar-btn').classList.toggle('dark-mode');
     document.querySelector('.dropdown-toggle').classList.toggle('dark-mode');
 
-    // Toggle dark mode for new chat link
+    
     document.querySelector('.new-chat').classList.toggle('dark-mode');
 
-    // Toggle dark mode for dropdown menu
+    
     document.querySelector('.dropdown-menu').classList.toggle('dark-mode');
 });
 
