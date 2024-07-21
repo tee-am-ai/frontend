@@ -15,24 +15,30 @@ Welcome to the frontend repository for the Chat AI project developed by `tee-am-
 - Dynamic textarea for message input
 - Seamless user experience
 
-### Screenshots
+## Screenshots
 
 1. **Untuk Light Mode**
-   ![Light Mode](https://github.com/user-attachments/assets/ffd4efd6-d8a9-4758-931c-f6d09452f7fc)
+
+   ![Light Mode](https://github.com/user-attachments/assets/291edec6-cea0-4ff2-b9df-d8b55a7752f1)
 
 2. **Untuk Dark Mode**
-   ![Dark Mode](https://github.com/user-attachments/assets/77f4e15d-a31d-41e3-a2f2-e1753cfb8755)
 
-### Installation
+   ![Dark Mode](https://github.com/user-attachments/assets/f7699400-6b5f-42f7-b473-c7217139c8a6)
+
+## Installation
 
 To get a local copy up and running, follow these simple steps.
 
 1. Clone the repository
+
    ```sh
    git clone https://github.com/tee-am-ai/frontend.git
    ```
+
 2. Navigate to the project directory
+
    ```sh
    cd frontend
    ```
+
 3. Open With Live Server
