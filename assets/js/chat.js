@@ -39,7 +39,7 @@ const Chat = () => {
         const userMessage = document.createElement("div");
         userMessage.className = "message user";
         userMessage.innerHTML = `
-            <img src="assets/images/user-icon1.jpeg" alt="User" class="profile-pic" />
+            <img src="assets/images/user-icon.jpg" alt="User" class="profile-pic" />
             <div class="bubble">${userInput}</div>
         `;
         chatBox.appendChild(userMessage);
