@@ -146,10 +146,12 @@ body {
   border-radius: 20px;
   text-indent: 15px;
   resize: none;
-  overflow-y: auto;
-  max-height: 150px; /* Anda bisa sesuaikan nilai ini */
-  width: calc(100% - 50px); /* Sesuaikan agar pas dengan tombol kirim */
+  overflow-y: hidden;
+  max-height: 150px; /* Sesuaikan nilai ini */
+  width: calc(100% - 60px); /* Sesuaikan agar pas dengan tombol kirim */
   display: inline-block;
+  padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
+  box-sizing: border-box; /* Pastikan padding tidak melebihi lebar */
 }
 
 #submit-btn {
