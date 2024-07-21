@@ -10,6 +10,7 @@ function getCookie(name) {
   return null;
 }
 const loginToken = getCookie("Authorization");
+
 // Check if the user is logged in
 if (loginToken === null) {
   Swal.fire({
