@@ -49,7 +49,6 @@ function responseData(result) {
 
 document.getElementById("button").addEventListener("click", Login);
 
-// function Show Password
 function togglePassword() {
     var passwordInput = document.getElementById("password");
     var eyeIcon = document.getElementById("eye-icon");
