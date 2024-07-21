@@ -142,17 +142,17 @@ body {
 #chat-input {
   flex: 1;
   padding: 10px;
-  padding-left: 25px; /* Padding kiri untuk semua baris */
-  padding-top: 15px; /* Padding kiri untuk semua baris */
-  padding-bottom: 15px; /* Padding kiri untuk semua baris */
+  padding-left: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 20px;
   resize: none;
   overflow-y: hidden;
-  max-height: 150px; /* Sesuaikan nilai ini */
-  width: calc(100% - 60px); /* Sesuaikan agar pas dengan tombol kirim */
+  max-height: 150px;
+  width: calc(100% - 60px);
   display: inline-block;
-  box-sizing: border-box; /* Pastikan padding tidak melebihi lebar */
+  box-sizing: border-box;
 }
 
 
