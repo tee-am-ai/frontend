@@ -32,7 +32,6 @@ function responseData(result) {
       title: "Login Successful",
       text: result.message,
     }).then(() => {
-      // Simpan status login pengguna di localStorage
       localStorage.setItem("isLoggedIn", "true");
       window.location.href = "./chat.html";
     });
@@ -44,5 +43,4 @@ function responseData(result) {
     });
   }
 }
-
 document.getElementById("button").addEventListener("click", Login);
