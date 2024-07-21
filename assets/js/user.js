@@ -1,4 +1,3 @@
-// Function to get a cookie by name
 function getCookie(name) {
     let cookieArr = document.cookie.split(";");
     for (let i = 0; i < cookieArr.length; i++) {
@@ -29,7 +28,6 @@ function getUser(target_url, responseFunction) {
 const apiUrl = "https://api-tee-am-ai.up.railway.app/user";
 
 function displayUserData(data) {
-    // Display the fetched username and email
     document.getElementById("username-display").textContent = data.data.namalengkap;
     document.getElementById("email-display").textContent = data.data.email;
 }
