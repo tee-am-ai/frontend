@@ -21,7 +21,5 @@ if (loginToken === null) {
     window.location.href = "./signin.html";
   });
 } else {
-  // User is logged in, proceed to chat page or other logic
   console.log("User is logged in, proceeding to chat page.");
-  // Add your logic here if needed when user is logged in
 }
