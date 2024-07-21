@@ -1,45 +1,37 @@
-// Mengambil elemen-elemen DOM yang diperlukan
-const sidebar = document.getElementById("sidebar"); // Elemen sidebar
-const sidebarCollapse = document.getElementById("sidebarCollapse"); // Tombol untuk mengcollapse/expand sidebar
-const inputArea = document.getElementById("input-area"); // Area input
-const backToTop = document.querySelector(".back-to-top"); // Tombol "back to top"
-const chatBox = document.getElementById("chat-box"); // Kotak chat
+const sidebar = document.getElementById("sidebar");
+const sidebarCollapse = document.getElementById("sidebarCollapse");
+const inputArea = document.getElementById("input-area");
+const backToTop = document.querySelector(".back-to-top");
+const chatBox = document.getElementById("chat-box");
 
-// Menambahkan event listener pada tombol sidebarCollapse untuk menangani klik
 sidebarCollapse.addEventListener("click", function () {
-  const screenWidth = window.innerWidth; // Mendapatkan lebar layar saat ini
-  let active = sidebar.classList.contains("active"); // Memeriksa apakah sidebar sedang dalam keadaan aktif
+  const screenWidth = window.innerWidth;
+  let active = sidebar.classList.contains("active");
 
-  // Toggle class 'active' pada sidebar
   if (active) {
-    sidebar.classList.remove("active"); // Menghapus class 'active' jika ada
+    sidebar.classList.remove("active");
   } else {
-    sidebar.classList.add("active"); // Menambahkan class 'active' jika tidak ada
+    sidebar.classList.add("active");
   }
 
-  active = sidebar.classList.contains("active"); // Memperbarui status aktif setelah toggle
+  active = sidebar.classList.contains("active");
 
-  // Menyesuaikan gaya elemen-elemen berdasarkan lebar layar dan status aktif sidebar
-  if (screenWidth <= 1199) { // Jika lebar layar lebih kecil atau sama dengan 1199px (layar kecil)
+  if (screenWidth <= 1199) {
     if (active) {
-      // Jika sidebar aktif, ubah margin elemen dan posisi tombol 'back to top'
       inputArea.style.marginLeft = "335px";
       chatBox.style.marginLeft = "335px";
       backToTop.style.right = "49%";
     } else {
-      // Jika sidebar tidak aktif, reset margin elemen dan posisi tombol 'back to top'
       inputArea.style.marginLeft = "0";
       chatBox.style.marginLeft = "0";
       backToTop.style.right = "41%";
     }
-  } else { // Jika lebar layar lebih besar dari 1199px (layar besar)
+  } else {
     if (active) {
-      // Jika sidebar aktif, ubah margin elemen dan posisi tombol 'back to top'
       inputArea.style.marginLeft = "32px";
       chatBox.style.marginLeft = "32px";
       backToTop.style.right = "49%";
     } else {
-      // Jika sidebar tidak aktif, ubah margin elemen dan posisi tombol 'back to top'
       inputArea.style.marginLeft = "335px";
       chatBox.style.marginLeft = "0";
       backToTop.style.right = "41%";
