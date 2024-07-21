@@ -47,14 +47,11 @@ function responseData(result) {
 
 document.getElementById("button1").addEventListener("click", Register);
 
-// Add event listener for Enter key press
 document.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         Register();
     }
 });
-
-// function Show Password 
 
 function togglePassword(inputId, iconId) {
     var passwordInput = document.getElementById(inputId);
