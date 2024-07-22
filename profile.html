@@ -92,6 +92,12 @@
         border-radius: 5px;
       }
 
+      .profile-img {
+        width: 100px; /* Adjust the size as needed */
+        height: 100px; /* Adjust the size as needed */
+        object-fit: cover; /* Ensures the image covers the area without distortion */
+      }
+
       h6 {
         font-size: 14px;
       }
@@ -180,10 +186,10 @@
             <ul
               class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"
             >
-            <li class="dropdown-header">
-              <h6 id="username-display">User</h6>
-              <span id="email-display">user@gmail.com</span>
-            </li>
+              <li class="dropdown-header">
+                <h6 id="username-display">User</h6>
+                <span id="email-display">user@gmail.com</span>
+              </li>
               <li>
                 <hr class="dropdown-divider" />
               </li>
@@ -264,9 +270,9 @@
                       <div class="card-block text-center text-white">
                         <div class="m-b-25">
                           <img
-                            src="https://img.icons8.com/bubbles/100/000000/user.png"
-                            class="img-radius"
-                            alt="User-Profile-Image"
+                            src="assets/images/user-icon1.jpeg"
+                            alt="Profile"
+                            class="profile-img rounded-circle"
                           />
                         </div>
                         <h6 id="username-display" class="f-w-600">Hembo Tingor</h6>
