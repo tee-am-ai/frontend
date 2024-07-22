@@ -28,12 +28,8 @@ function getUser(target_url, responseFunction) {
 const apiUrl = "https://api-tee-am-ai.up.railway.app/user";
 
 function displayUserData(data) {
-    document.querySelectorAll("#username-display").forEach(el => {
-        el.textContent = data.data.namalengkap;
-    });
-    document.querySelectorAll("#email-display").forEach(el => {
-        el.textContent = data.data.email;
-    });
+    document.getElementById("username-display").textContent = data.data.namalengkap;
+    document.getElementById("email-display").textContent = data.data.email;
 }
 
 function responseUserData(result) {
@@ -44,6 +40,4 @@ function responseUserData(result) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    getUser(apiUrl, responseUserData);
-});
+getUser(apiUrl, responseUserData);
