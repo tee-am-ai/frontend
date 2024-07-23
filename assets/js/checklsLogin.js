@@ -24,3 +24,10 @@ const Login = () => {
 
   postLogin(target_url, data, responseData);
 };
+
+function responseData(result) {
+
+  } else {
+
+}
+
