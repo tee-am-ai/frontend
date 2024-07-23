@@ -32,12 +32,12 @@ function displayUserData(data) {
     document.getElementById("email-display").textContent = data.data.email;
 }
 
-// function responseUserData(result) {
-//     if (result.error === undefined || !result.error) {
-//         displayUserData(result);
-//     } else {
-//         console.error("Error fetching user data:", result.message);
-//     }
-// }
+function responseUserData(result) {
+    if (result.error === undefined || !result.error) {
+        displayUserData(result);
+    } else {
+        console.error("Error fetching user data:", result.message);
+    }
+}
 
 // getUser(apiUrl, responseUserData);
