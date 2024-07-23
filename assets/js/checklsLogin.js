@@ -31,6 +31,10 @@ function responseData(result) {
       icon: "success",
       title: "Login Successful",
       text: result.message,
+    }).then(() => {
+      localStorage.setItem("isLoggedIn", "true");
+      window.location.href = "./chat.html";
+    });
   } else {
 
 }
