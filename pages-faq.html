@@ -1,265 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Help - Chat AI</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Help - Chat AI</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+  <!-- Favicons -->
+  <link href="assets/landingpages/favicon.ico" rel="icon" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet" />
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet" />
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet" />
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <button type="button" id="sidebarCollapse" style="border: none; background-color: transparent; margin-right: 20px;">
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+      </button>
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/images/tee-am-ai panjang.svg" alt="" />
+      </a>
+    </div>
 
-    <!-- Favicons -->
-    <link href="assets/landingpages/favicon.ico" rel="icon" />
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
-
-    <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet" />
-    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet" />
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
-    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet" />
-
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header id="header" class="header fixed-top d-flex align-items-center">
-      <div class="d-flex align-items-center justify-content-between">
-        <button
-          type="button"
-          id="sidebarCollapse"
-          style="
-            border: none;
-            background-color: transparent;
-            margin-right: 20px;
-          "
-        >
-          <i class="bi bi-list toggle-sidebar-btn"></i>
-        </button>
-        <a href="index.html" class="logo d-flex align-items-center">
-          <img src="assets/images/tee-am-ai panjang.svg" alt="" />
-        </a>
-      </div>
-
-      <nav class="header-nav ms-auto">
-        <ul class="d-flex align-items-center">
-          <!-- End Notification Nav -->
-
-          <!-- End Messages Nav -->
-
-          <li class="nav-item dropdown pe-3">
-            <a
-              class="nav-link nav-profile d-flex align-items-center pe-0"
-              href="#"
-              data-bs-toggle="dropdown"
-            >
-              <img
-                src="assets/images/user-icon1.jpeg"
-                alt="Profile"
-                class="rounded-circle"
-              />
-              <span class="d-none d-md-block dropdown-toggle ps-2"></span> </a
-            ><!-- End Profile Iamge Icon -->
-
-            <ul
-              class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"
-            >
-              <li class="dropdown-header">
-                <h6 id="username-display">User</h6>
-                <span id="email-display">user@gmail.com</span>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="profile.html">
-                  <i class="bi bi-person"></i>
-                  <span>My Profile</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li>
-                <a
-                  class="dropdown-item d-flex align-items-center"
-                  href="#"
-                  id="toggle-dark-mode"
-                >
-                  <i class="bi bi-moon"></i>
-                  <span>Dark Mode</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <i class="bi bi-question-circle"></i>
-                  <span>Need Help?</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-
-              <li>
-                <a
-                  class="dropdown-item d-flex align-items-center"
-                  href="#"
-                  id="btnLogout"
-                >
-                  <i class="bi bi-box-arrow-right"></i>
-                  <span>Sign Out</span>
-                </a>
-              </li>
-            </ul>
-            <!-- End Profile Dropdown Items -->
-          </li>
-          <!-- End Profile Nav -->
-        </ul>
-      </nav>
-      <!-- End Icons Navigation -->
-    </header>
-
-    <aside id="sidebar" class="sidebar">
-      <ul class="sidebar-nav" id="sidebar-nav">
-        <li class="nav-item">
-          <a class="nav-link new-chat" href="chat.html">
-            <i class="bi bi-chat"></i>
-            <span>Chat</span>
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/images/user-icon1.jpeg" alt="Profile" class="rounded-circle" />
+            <span class="d-none d-md-block dropdown-toggle ps-2"></span>
           </a>
+          <!-- End Profile Image Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6 id="username-display">User</h6>
+              <span id="email-display">user@gmail.com</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#" id="toggle-dark-mode">
+                <i id="dark-mode-icon" class="bi bi-moon"></i>
+                <span id="dark-mode-text">Dark Mode</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#" id="btnLogout">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+          </ul>
+          <!-- End Profile Dropdown Items -->
         </li>
+        <!-- End Profile Nav -->
       </ul>
-    </aside>
+    </nav>
+    <!-- End Icons Navigation -->
+  </header>
 
-    <main id="main" class="main">
-      <section class="section help">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <h1 class="mt-4">Help</h1>
-              <p class="lead">
-                Welcome to the help page. Here you will find information on how
-                to use the application.
-              </p>
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link new-chat" href="chat.html">
+          <i class="bi bi-chat"></i>
+          <span>Chat</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
 
-              <div class="accordion" id="helpAccordion">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                    >
-                      Getting Started
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#helpAccordion"
-                  >
-                    <div class="accordion-body">
-                      <strong>Step 1:</strong> Create an account by clicking on
-                      the sign-up button.<br />
-                      <strong>Step 2:</strong> Register by inputting full name,
-                      email and password.<br />
-                      <strong>Step 3:</strong> Log in with your new account
-                      details.<br />
-                      <strong>Step 4:</strong> Wait until you enter the chat
-                      page<br />
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      How to Use the Chat
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingTwo"
-                    data-bs-parent="#helpAccordion"
-                  >
-                    <div class="accordion-body">
-                      <strong>Step 1:</strong> Type the message you want to ask
-                      in the chat input box.<br />
-                      <strong>Step 2:</strong> Press the enter key or press
-                      send.<br />
-                      <strong>Step 3:</strong> Wait until AI tee-am-ai responds
-                      to your request.<br />
-                    </div>
+  <main id="main" class="main">
+    <section class="section help">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="mt-4">Help</h1>
+            <p class="lead">
+              Welcome to the help page. Here you will find information on how to use the application.
+            </p>
+
+            <div class="accordion" id="helpAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Getting Started
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#helpAccordion">
+                  <div class="accordion-body">
+                    <strong>Step 1:</strong> Create an account by clicking on the sign-up button.<br />
+                    <strong>Step 2:</strong> Register by inputting full name, email and password.<br />
+                    <strong>Step 3:</strong> Log in with your new account details.<br />
+                    <strong>Step 4:</strong> Wait until you enter the chat page<br />
                   </div>
                 </div>
               </div>
-
-              <h2 class="mt-5">Contact Support</h2>
-              <p>
-                If you need further assistance, please contact our support team:
-              </p>
-              <ul>
-                <li>Email: tee-am-ai@gmail.com</li>
-                <li>Phone: +62 8XXX XXXX XXX</li>
-              </ul>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How to Use the Chat
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#helpAccordion">
+                  <div class="accordion-body">
+                    <strong>Step 1:</strong> Type the message you want to ask in the chat input box.<br />
+                    <strong>Step 2:</strong> Press the enter key or press send.<br />
+                    <strong>Step 3:</strong> Wait until AI tee-am-ai responds to your request.<br />
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <h2 class="mt-5">Contact Support</h2>
+            <p>
+              If you need further assistance, please contact our support team:
+            </p>
+            <ul>
+              <li>Email: tee-am-ai@gmail.com</li>
+              <li>Phone: +62 8XXX XXXX XXX</li>
+            </ul>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <a
-      href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
-    >
-      <i class="bi bi-arrow-up-short"></i>
-    </a>
-    
-    <!-- Template Main JS File -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/sidebar.js"></script>
-    <script src="assets/js/user.js"></script>
-    <script type="module" src="assets/js/chat.js"></script>
-    <script type="module" src="assets/js/logout.js"></script>
-    <script src="assets/js/auth.js"></script>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
-    <!-- Dark Mode Toggle Script -->
-    <script>
-      document
-        .getElementById("toggle-dark-mode")
-        .addEventListener("click", function () {
-          document.body.classList.toggle("dark-mode");
-        });
-    </script>
-  </body>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/sidebar.js"></script>
+  <script src="assets/js/user.js"></script>
+  <script type="module" src="assets/js/chat.js"></script>
+  <script type="module" src="assets/js/logout.js"></script>
+  <script src="assets/js/auth.js"></script>
+
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    document.getElementById('toggle-dark-mode').addEventListener('click', function () {
+      var icon = document.getElementById('dark-mode-icon');
+      var text = document.getElementById('dark-mode-text');
+      if (text.innerHTML === 'Dark Mode') {
+        icon.classList.remove('bi-moon');
+        icon.classList.add('bi-sun');
+        text.innerHTML = 'Light Mode';
+        document.body.classList.add('dark-mode');
+      } else {
+        icon.classList.remove('bi-sun');
+        icon.classList.add('bi-moon');
+        text.innerHTML = 'Dark Mode';
+        document.body.classList.remove('dark-mode');
+      }
+    });
+  </script>
+  <style>
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .dark-mode .nav-link,
+    .dark-mode .nav-link:hover {
+      color: #ffffff;
+    }
+  </style>
+</body>
 </html>
