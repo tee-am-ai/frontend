@@ -12,3 +12,9 @@ function postLogin(target_url, data, responseFunction) {
     .then((result) => responseFunction(JSON.parse(result)))
     .catch((error) => console.log("error", error));
 }
+
+const Login = () => {
+
+
+
+
