@@ -155,7 +155,6 @@ body {
   box-sizing: border-box;
 }
 
-
 #submit-btn {
   padding: 10px;
   border: none;
@@ -172,14 +171,14 @@ body {
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: #1B1E38 ;
+  background-color: #1B1E38;
   color: #ffffff;
 }
 
 /* Dark mode styles for accordion button */
 body.dark-mode .accordion-button {
   color: #ffffff;
-  background-color: #282C40 ;
+  background-color: #282C40;
 }
 
 body.dark-mode .accordion-button::after {
@@ -194,7 +193,7 @@ body.dark-mode .header,
 body.dark-mode .sidebar, 
 body.dark-mode .nav-profile, 
 body.dark-mode .accordion-button {
-  background-color: #282C40 ;
+  background-color: #282C40;
   color: #ffffff;
 }
 
@@ -223,11 +222,11 @@ body.dark-mode #chat-input::placeholder {
 }
 
 body.dark-mode #input-area {
-  background-color: #282C40 ;
+  background-color: #282C40;
 }
 
 body.dark-mode .new-chat {
-  background-color: #282C40 ;
+  background-color: #282C40;
 }
 
 body.dark-mode .new-chat i {
@@ -274,12 +273,12 @@ body.dark-mode .dropdown-menu .dropdown-divider {
 .header.dark-mode, 
 .sidebar.dark-mode, 
 #main.dark-mode {
-  background-color: #282C40 ;
+  background-color: #282C40;
   color: #ffffff;
 }
 
 .chat-content-area.dark-mode {
-  background-color: #282C40 ;
+  background-color: #282C40;
   color: #ffffff;
 }
 
@@ -300,7 +299,7 @@ body.dark-mode .dropdown-menu .dropdown-divider {
 }
 
 #input-area.dark-mode {
-  background-color: #282C40 ;
+  background-color: #282C40;
 }
 
 #chat-input.dark-mode {
@@ -454,24 +453,19 @@ h6 {
   background-color: #f6f9ff;
 }
 
-/* Dropdown Menu Arrow Styles */
-.dropdown-menu-arrow::before {
-  content: "";
-  width: 13px;
-  height: 13px;
-  background: var(--dropdown-arrow-bg-light); /* Light mode background */
-  position: absolute;
-  top: -7px;
-  right: 20px;
-  transform: rotate(45deg);
-  border-top: 1px solid var(--dropdown-arrow-border-light); /* Light mode border color */
-  border-left: 1px solid var(--dropdown-arrow-border-light); /* Light mode border color */
-}
-
-body.dark-mode .dropdown-menu-arrow::before {
-  background: var(--dropdown-arrow-bg-dark); /* Dark mode background */
-  border-top: 1px solid var(--dropdown-arrow-border-dark); /* Dark mode border color */
-  border-left: 1px solid var(--dropdown-arrow-border-dark); /* Dark mode border color */
+@media (min-width: 768px) {
+  .dropdown-menu-arrow::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    background: #fff;
+    position: absolute;
+    top: -7px;
+    right: 20px;
+    transform: rotate(45deg);
+    border-top: 1px solid #eaedf1;
+    border-left: 1px solid #eaedf1;
+  }
 }
 
 @keyframes dropdown-animate {
@@ -901,6 +895,8 @@ body.dark-mode .dropdown-menu-arrow::before {
 .header-nav .profile .dropdown-item:hover {
   background-color: #f6f9ff;
 }
+
+
 
 /*--------------------------------------------------------------
 # Sidebar
@@ -1539,4 +1535,3 @@ body.dark-mode .dropdown-menu-arrow::before {
   font-size: 13px;
   color: #012970;
 }
-
