@@ -9,21 +9,21 @@ function getCookie(name) {
     return null;
 }
 
-// function getUser(target_url, responseFunction) {
-//     const myHeaders = new Headers();
-//     myHeaders.append("Authorization", getCookie("Authorization"));
+function getUser(target_url, responseFunction) {
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", getCookie("Authorization"));
 
-//     const requestOptions = {
-//         method: 'GET',
-//         headers: myHeaders,
-//         redirect: 'follow'
-//     };
+    const requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
 
-//     fetch(target_url, requestOptions)
-//         .then(response => response.text())
-//         .then(result => responseFunction(JSON.parse(result)))
-//         .catch(error => console.log('error', error));
-// }
+    fetch(target_url, requestOptions)
+        .then(response => response.text())
+        .then(result => responseFunction(JSON.parse(result)))
+        .catch(error => console.log('error', error));
+}
 
 // const apiUrl = "https://api-tee-am-ai.up.railway.app/user";
 
