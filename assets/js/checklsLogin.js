@@ -35,4 +35,7 @@ function responseData(result) {
       localStorage.setItem("isLoggedIn", "true");
       window.location.href = "./chat.html";
     });
+  } else {
+    Swal.fire({});
+  }
 }
