@@ -36,6 +36,8 @@ function responseData(result) {
       window.location.href = "./chat.html";
     });
   } else {
-    Swal.fire({});
+    Swal.fire({
+      icon: "error",
+    });
   }
 }
