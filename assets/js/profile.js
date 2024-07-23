@@ -25,7 +25,7 @@ function getUser(target_url, responseFunction) {
         .catch(error => console.log('error', error));
 }
 
-// const apiUrl = "https://api-tee-am-ai.up.railway.app/user";
+const apiUrl = "https://api-tee-am-ai.up.railway.app/user";
 
 // function displayUserData(data) {
 //     document.getElementById("username-display").textContent = data.data.namalengkap;
