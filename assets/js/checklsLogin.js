@@ -38,6 +38,7 @@ function responseData(result) {
   } else {
     Swal.fire({
       icon: "error",
+      title: "Login Failed",
     });
   }
 }
