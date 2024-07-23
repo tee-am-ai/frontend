@@ -124,13 +124,13 @@ document.getElementById('toggle-dark-mode').addEventListener('click', function (
     const modeText = document.getElementById('mode-text');
     const modeIcon = document.getElementById('mode-icon');
 
-    if (body.classList.contains('dark-mode')) {
-        modeText.textContent = 'Light Mode';
-        modeIcon.classList.remove('bi-moon');
-        modeIcon.classList.add('bi-sun');
-    } else {
-        modeText.textContent = 'Dark Mode';
-        modeIcon.classList.remove('bi-sun');
-        modeIcon.classList.add('bi-moon');
-    }
+    // if (body.classList.contains('dark-mode')) {
+    //     modeText.textContent = 'Light Mode';
+    //     modeIcon.classList.remove('bi-moon');
+    //     modeIcon.classList.add('bi-sun');
+    // } else {
+    //     modeText.textContent = 'Dark Mode';
+    //     modeIcon.classList.remove('bi-sun');
+    //     modeIcon.classList.add('bi-moon');
+    // }
 });
