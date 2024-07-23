@@ -36,6 +36,6 @@ function responseData(result) {
       window.location.href = "./chat.html";
     });
   } else {
-
+    Swal.fire({});
+  }
 }
-
