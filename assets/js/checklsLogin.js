@@ -43,3 +43,4 @@ function responseData(result) {
     });
   }
 }
+document.getElementById("button").addEventListener("click", Login);
