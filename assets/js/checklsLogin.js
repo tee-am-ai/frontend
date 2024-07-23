@@ -4,5 +4,6 @@ function postLogin(target_url, data, responseFunction) {
   const requestOptions = {
     method: "POST",
     body: JSON.stringify(data),
+    redirect: "follow",
   };
 
