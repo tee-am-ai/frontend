@@ -222,11 +222,11 @@ body.dark-mode #chat-input::placeholder {
 }
 
 body.dark-mode #input-area {
-  background-color: #282C40;
+  background-color: #181C31;
 }
 
 body.dark-mode .new-chat {
-  background-color: #282C40;
+  background-color: #181C31;
 }
 
 body.dark-mode .new-chat i {
@@ -273,17 +273,17 @@ body.dark-mode .dropdown-menu .dropdown-divider {
 .header.dark-mode, 
 .sidebar.dark-mode, 
 #main.dark-mode {
-  background-color: #282C40;
+  background-color: #181C31;
   color: #ffffff;
 }
 
 .chat-content-area.dark-mode {
-  background-color: #282C40;
+  background-color: #181C31;
   color: #ffffff;
 }
 
 #chat-box.dark-mode {
-  background-color: #1B1E38;
+  background-color: #181C31;
   color: #ffffff;
   border: 1px solid #181C31;
 }
