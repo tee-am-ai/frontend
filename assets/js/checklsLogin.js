@@ -25,4 +25,11 @@ const Login = () => {
   postLogin(target_url, data, responseData);
 };
 
-function responseData(result) {}
+function responseData(result) {
+  if (result.error === undefined || !result.error) {
+    Swal.fire({
+      icon: "success",
+      title: "Login Successful",
+
+}
+
