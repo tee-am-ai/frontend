@@ -27,6 +27,20 @@ const Login = () => {
 
 function responseData(result) {
   if (result.error === undefined || !result.error) {
+    Swal.fire({
+      icon: "success",
+      title: "Login Successful",
+      text: result.message,
+    }).then(() => {
+      localStorage.setItem("isLoggedIn", "true");
+      window.location.href = "./chat.html";
+    });
   } else {
+    Swal.fire({
+      icon: "error",
+      title: "Login Failed",
+      text: result.message,
+    });
   }
 }
+document.getElementById("button").addEventListener("click", Login);
