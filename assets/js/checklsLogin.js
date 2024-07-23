@@ -21,3 +21,6 @@ const Login = () => {
     email: getValue("email"),
     password: getValue("password"),
   };
+
+  postLogin(target_url, data, responseData);
+};
