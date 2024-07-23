@@ -17,5 +17,7 @@ const Login = () => {
   const target_url =
     "https://asia-southeast2-teeamai-427702.cloudfunctions.net/teeamai/login";
 
-  const data = {};
+  const data = {
+    email: getValue("email"),
+  };
 };
