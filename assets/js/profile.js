@@ -27,10 +27,10 @@ function getUser(target_url, responseFunction) {
 
 const apiUrl = "https://api-tee-am-ai.up.railway.app/user";
 
-// function displayUserData(data) {
-//     document.getElementById("username-display").textContent = data.data.namalengkap;
-//     document.getElementById("email-display").textContent = data.data.email;
-// }
+function displayUserData(data) {
+    document.getElementById("username-display").textContent = data.data.namalengkap;
+    document.getElementById("email-display").textContent = data.data.email;
+}
 
 // function responseUserData(result) {
 //     if (result.error === undefined || !result.error) {
