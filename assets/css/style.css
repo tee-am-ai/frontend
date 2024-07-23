@@ -155,7 +155,6 @@ body {
   box-sizing: border-box;
 }
 
-
 #submit-btn {
   padding: 10px;
   border: none;
@@ -172,14 +171,14 @@ body {
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: #1B1E38 ;
+  background-color: #1B1E38;
   color: #ffffff;
 }
 
 /* Dark mode styles for accordion button */
 body.dark-mode .accordion-button {
   color: #ffffff;
-  background-color: #282C40 ;
+  background-color: #282C40;
 }
 
 body.dark-mode .accordion-button::after {
@@ -194,7 +193,7 @@ body.dark-mode .header,
 body.dark-mode .sidebar, 
 body.dark-mode .nav-profile, 
 body.dark-mode .accordion-button {
-  background-color: #282C40 ;
+  background-color: #282C40;
   color: #ffffff;
 }
 
@@ -223,11 +222,11 @@ body.dark-mode #chat-input::placeholder {
 }
 
 body.dark-mode #input-area {
-  background-color: #282C40 ;
+  background-color: #181C31;
 }
 
 body.dark-mode .new-chat {
-  background-color: #282C40 ;
+  background-color: #181C31;
 }
 
 body.dark-mode .new-chat i {
@@ -274,17 +273,17 @@ body.dark-mode .dropdown-menu .dropdown-divider {
 .header.dark-mode, 
 .sidebar.dark-mode, 
 #main.dark-mode {
-  background-color: #282C40 ;
+  background-color: #181C31;
   color: #ffffff;
 }
 
 .chat-content-area.dark-mode {
-  background-color: #282C40 ;
+  background-color: #181C31;
   color: #ffffff;
 }
 
 #chat-box.dark-mode {
-  background-color: #1B1E38;
+  background-color: #181C31;
   color: #ffffff;
   border: 1px solid #181C31;
 }
@@ -300,7 +299,7 @@ body.dark-mode .dropdown-menu .dropdown-divider {
 }
 
 #input-area.dark-mode {
-  background-color: #282C40 ;
+  background-color: #282C40;
 }
 
 #chat-input.dark-mode {
@@ -454,19 +453,30 @@ h6 {
   background-color: #f6f9ff;
 }
 
-@media (min-width: 768px) {
-  .dropdown-menu-arrow::before {
-    content: "";
-    width: 13px;
-    height: 13px;
-    background: #fff;
-    position: absolute;
-    top: -7px;
-    right: 20px;
-    transform: rotate(45deg);
-    border-top: 1px solid #eaedf1;
-    border-left: 1px solid #eaedf1;
-  }
+/* Dark Mode Styles for Dropdown Menu */
+body.dark-mode .dropdown-menu {
+  background-color: #181C31;
+  color: #ffffff;
+  border: 1px solid #555555;
+}
+
+body.dark-mode .dropdown-menu .dropdown-header,
+body.dark-mode .dropdown-menu .dropdown-footer {
+  color: #ffffff;
+  background-color: #181C31;
+}
+
+body.dark-mode .dropdown-menu .dropdown-divider {
+  border-color: #555555;
+}
+
+body.dark-mode .dropdown-menu .dropdown-item {
+  color: #ffffff;
+}
+
+body.dark-mode .dropdown-menu .dropdown-item:hover {
+  background-color: #4E6BFF;
+  color: #ffffff;
 }
 
 @keyframes dropdown-animate {
@@ -896,6 +906,8 @@ h6 {
 .header-nav .profile .dropdown-item:hover {
   background-color: #f6f9ff;
 }
+
+
 
 /*--------------------------------------------------------------
 # Sidebar
@@ -1534,4 +1546,3 @@ h6 {
   font-size: 13px;
   color: #012970;
 }
-
