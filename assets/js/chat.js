@@ -63,43 +63,28 @@ document.getElementById("chat-input").addEventListener("keypress", function (eve
     }
 });
 
-// document.getElementById("chat-input").addEventListener("keydown", function (event) {
-//     if (event.key === "Enter" && event.shiftKey) {
-//         const cursorPosition = this.selectionStart;
-//         this.value = this.value.substring(0, cursorPosition) + "\n" + this.value.substring(cursorPosition);
-//         this.selectionStart = cursorPosition + 1;
-//         this.selectionEnd = cursorPosition + 1;
-//         event.preventDefault();
-//     }
-// });
+document.getElementById("chat-input").addEventListener("keydown", function (event) {
+    if (event.key === "Enter" && event.shiftKey) {
+
+        
+        const cursorPosition = this.selectionStart;
+        this.value = this.value.substring(0, cursorPosition) + "\n" + this.value.substring(cursorPosition);
+        this.selectionStart = cursorPosition + 1;
+        this.selectionEnd = cursorPosition + 1;
+        event.preventDefault();
+    }
+});
 
 document.getElementById('toggle-dark-mode').addEventListener('click', function () {
-    const body = document.body;
-    body.classList.toggle('dark-mode');
-
-    const header = document.querySelector('.header');
-    header.classList.toggle('dark-mode');
-
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('dark-mode');
-
-    const main = document.querySelector('#main');
-    main.classList.toggle('dark-mode');
-
-    const chatContentArea = document.querySelector('.chat-content-area');
-    chatContentArea.classList.toggle('dark-mode');
-
-    const chatBox = document.querySelector('#chat-box');
-    chatBox.classList.toggle('dark-mode');
-
-    const inputArea = document.querySelector('#input-area');
-    inputArea.classList.toggle('dark-mode');
-
-    const chatInput = document.querySelector('#chat-input');
-    chatInput.classList.toggle('dark-mode');
-
-    const submitBtn = document.querySelector('#submit-btn');
-    submitBtn.classList.toggle('dark-mode');
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('.header').classList.toggle('dark-mode');
+    document.querySelector('.sidebar').classList.toggle('dark-mode');
+    document.querySelector('#main').classList.toggle('dark-mode');
+    document.querySelector('.chat-content-area').classList.toggle('dark-mode');
+    document.querySelector('#chat-box').classList.toggle('dark-mode');
+    document.querySelector('#input-area').classList.toggle('dark-mode');
+    document.querySelector('#chat-input').classList.toggle('dark-mode');
+    document.querySelector('#submit-btn').classList.toggle('dark-mode');
 
     document.querySelectorAll('.bi').forEach(function (icon) {
         icon.classList.toggle('dark-mode');
@@ -109,28 +94,8 @@ document.getElementById('toggle-dark-mode').addEventListener('click', function (
         bubble.classList.toggle('dark-mode');
     });
 
-    const toggleSidebarBtn = document.querySelector('.toggle-sidebar-btn');
-    toggleSidebarBtn.classList.toggle('dark-mode');
-
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    dropdownToggle.classList.toggle('dark-mode');
-
-    const newChat = document.querySelector('.new-chat');
-    newChat.classList.toggle('dark-mode');
-
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-    dropdownMenu.classList.toggle('dark-mode');
-
-    const modeText = document.getElementById('mode-text');
-    const modeIcon = document.getElementById('mode-icon');
-
-    if (body.classList.contains('dark-mode')) {
-        modeText.textContent = 'Light Mode';
-        modeIcon.classList.remove('bi-moon');
-        modeIcon.classList.add('bi-sun');
-    } else {
-        modeText.textContent = 'Dark Mode';
-        modeIcon.classList.remove('bi-sun');
-        modeIcon.classList.add('bi-moon');
-    }
+    document.querySelector('.toggle-sidebar-btn').classList.toggle('dark-mode');
+    document.querySelector('.dropdown-toggle').classList.toggle('dark-mode');
+    document.querySelector('.new-chat').classList.toggle('dark-mode');
+    document.querySelector('.dropdown-menu').classList.toggle('dark-mode');
 });
