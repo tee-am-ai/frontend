@@ -30,6 +30,7 @@ function responseData(result) {
     Swal.fire({
       icon: "success",
       title: "Login Successful",
+      text: result.message,
 
 }
 
