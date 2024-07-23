@@ -36,6 +36,11 @@ function responseData(result) {
       window.location.href = "./chat.html";
     });
   } else {
-    Swal.fire({});
+    Swal.fire({
+      icon: "error",
+      title: "Login Failed",
+      text: result.message,
+    });
   }
 }
+document.getElementById("button").addEventListener("click", Login);
