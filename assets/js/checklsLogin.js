@@ -26,7 +26,11 @@ const Login = () => {
 };
 
 function responseData(result) {
-
+  if (result.error === undefined || !result.error) {
+    Swal.fire({
+      icon: "success",
+      title: "Login Successful",
+      text: result.message,
   } else {
 
 }
