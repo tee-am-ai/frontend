@@ -19,5 +19,6 @@ const Login = () => {
 
   const data = {
     email: getValue("email"),
+    password: getValue("password"),
   };
 };
