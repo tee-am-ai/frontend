@@ -40,4 +40,4 @@ function responseUserData(result) {
     }
 }
 
-// getUser(apiUrl, responseUserData);
+getUser(apiUrl, responseUserData);
