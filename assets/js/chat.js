@@ -51,6 +51,8 @@ const Chat = () => {
 
         document.getElementById("chat-input").value = "";
         chatBox.scrollTop = chatBox.scrollHeight;
+
+        botMessage = document.createElement("div");
     }
 }
 
