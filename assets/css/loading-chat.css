@@ -27,3 +27,8 @@
     }
   }
   
+  /* Stagger the animation for each dot */
+  .chat-loading .dot:nth-child(1) {
+    animation-delay: -0.32s;
+  }
+  
