@@ -18,11 +18,10 @@ function postChat(target_url, data, responseFunction) {
         })
         .catch(error => console.log('error', error));
 }
-
 function responseData(result) {
     const chatBox = document.getElementById("chat-box");
-    const botMessage = document.createElement("div");
-    botMessage.className = "message bot";
+    //  = document.createElement("div");
+    // botMessage.className = "message bot";
     botMessage.innerHTML = `
         <img src="assets/images/logo kecik.png" alt="Bot" class="profile-pic" />
         <div class="bubble">${result.answer || result.message || "No response"}</div>
