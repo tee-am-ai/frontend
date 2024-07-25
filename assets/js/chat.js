@@ -63,6 +63,7 @@ const Chat = () => {
           </div>
           </div>
         `;
+        chatBox.appendChild(botMessage);
     }
 }
 
