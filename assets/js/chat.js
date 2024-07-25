@@ -54,6 +54,15 @@ const Chat = () => {
 
         botMessage = document.createElement("div");
         botMessage.className = "message bot";
+        botMessage.innerHTML = `
+            <img src="assets/images/logo kecik.png" alt="Bot" class="profile-pic" />
+            <div class="bubble"><div class="chat-loading">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          </div>
+        `;
     }
 }
 
