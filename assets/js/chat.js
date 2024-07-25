@@ -53,6 +53,7 @@ const Chat = () => {
         chatBox.scrollTop = chatBox.scrollHeight;
 
         botMessage = document.createElement("div");
+        botMessage.className = "message bot";
     }
 }
 
