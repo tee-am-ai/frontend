@@ -21,8 +21,6 @@ function postChat(target_url, data, responseFunction) {
 let botMessage;
 function responseData(result) {
     const chatBox = document.getElementById("chat-box");
-    //  = document.createElement("div");
-    // botMessage.className = "message bot";
     botMessage.innerHTML = `
         <img src="assets/images/logo kecik.png" alt="Bot" class="profile-pic" />
         <div class="bubble">${result.answer || result.message || "No response"}</div>
