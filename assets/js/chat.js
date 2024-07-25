@@ -18,6 +18,7 @@ function postChat(target_url, data, responseFunction) {
         })
         .catch(error => console.log('error', error));
 }
+let botMessage;
 function responseData(result) {
     const chatBox = document.getElementById("chat-box");
     //  = document.createElement("div");
