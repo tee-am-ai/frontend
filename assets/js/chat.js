@@ -44,6 +44,9 @@ function responseData(result) {
             document.getElementById('disabled-input').setAttribute('id', 'chat-input');
         }
     }
+
+    textBotMessage.classList.add('bubble');
+    typeMessage();
 }
 
 const Chat = () => {
