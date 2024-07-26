@@ -34,7 +34,12 @@ function responseData(result) {
     const typingSpeed = 10;
 
     function typeMessage() {
-         
+        if (index < text.length) {
+            textBotMessage.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeMessage, typingSpeed);
+            window.scrollTo(0, document.body.scrollHeight);
+        } 
     }
 }
 
