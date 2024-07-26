@@ -32,6 +32,10 @@ function responseData(result) {
     const text = result.answer || result.message || "No response";
     let index = 0;
     const typingSpeed = 10;
+
+    function typeMessage() {
+         
+    }
 }
 
 const Chat = () => {
