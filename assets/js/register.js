@@ -1,5 +1,7 @@
+// import Jscroot 
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 
+// Function to send POST request to the server
 function postRegister(target_url, data, responseFunction) {
 
     const requestOptions = {
@@ -14,6 +16,7 @@ function postRegister(target_url, data, responseFunction) {
         .catch(error => console.log('error', error));
 }
 
+// Function to handle the register button click event
 const Register = () => {
     const target_url = "https://api-tee-am-ai.up.railway.app/signup";
 
@@ -27,6 +30,7 @@ const Register = () => {
     postRegister(target_url, data, responseData);
 }
 
+// Function to handle the response data from the server
 function responseData(result) {
     if (result.error === undefined || !result.error) {
         Swal.fire({
@@ -45,8 +49,10 @@ function responseData(result) {
     }
 }
 
+// Event listener for the register button
 document.getElementById("button1").addEventListener("click", Register);
 
+// Event listener for the enter key
 document.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         Register();
