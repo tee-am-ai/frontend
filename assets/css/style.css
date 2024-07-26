@@ -222,6 +222,7 @@ body.dark-mode #chat-input::placeholder {
 }
 
 body.dark-mode #disabled-input::placeholder {
+  color: #cccccc;
 }
 
 body.dark-mode #input-area {
