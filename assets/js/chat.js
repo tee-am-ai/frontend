@@ -89,6 +89,7 @@ const Chat = () => {
         botMessage.appendChild(textBotMessage);
         chatBox.appendChild(botMessage);
         chatBox.scrollTop = chatBox.scrollHeight;
+        window.scrollTo(0, document.body.scrollHeight);
     }
 }
 
