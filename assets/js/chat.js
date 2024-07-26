@@ -1,9 +1,10 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 
 function postChat(target_url, data, responseFunction) {
+    const myHeaders = new Headers();
     const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: myHeaders,
         body: JSON.stringify(data),
         redirect: 'follow'
     };
