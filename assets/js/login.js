@@ -1,7 +1,5 @@
-// Import jscroot
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 
-// Function to send POST request
 function postLogin(target_url, data, responseFunction) {
   const requestOptions = {
     method: "POST",
@@ -15,7 +13,6 @@ function postLogin(target_url, data, responseFunction) {
     .catch((error) => console.log("error", error));
 }
 
-// Function to handle login
 const Login = () => {
   const target_url =
     "https://api-tee-am-ai.up.railway.app/login";
@@ -28,7 +25,6 @@ const Login = () => {
   postLogin(target_url, data, responseData);
 };
 
-// Function to handle response
 function responseData(result) {
   if (result.error === undefined || !result.error) {
     document.cookie = `Authorization=${encodeURIComponent(
@@ -51,10 +47,8 @@ function responseData(result) {
   }
 }
 
-// Event listener for login button
 document.getElementById("button").addEventListener("click", Login);
 
-// Event listener for Enter key
 function togglePassword() {
     var passwordInput = document.getElementById("password");
     var eyeIcon = document.getElementById("eye-icon");
@@ -69,5 +63,4 @@ function togglePassword() {
     }
 }
 
-// Event listener for eye icon
 document.getElementById("toggle-password").addEventListener("click", togglePassword);
