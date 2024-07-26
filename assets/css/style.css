@@ -218,6 +218,9 @@ body.dark-mode #chat-input {
 }
 
 body.dark-mode #disabled-input {
+  background-color: #181C31;
+  color: #ffffff;
+  border: 1px solid #555555;
 }
 
 body.dark-mode #chat-input::placeholder {
