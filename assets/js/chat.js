@@ -49,6 +49,7 @@ function responseData(result) {
     typeMessage();
 }
 
+const button = document.querySelector('#submit-btn');
 const Chat = () => {
     const chatBox = document.getElementById("chat-box");
     const userInput = getValue("chat-input");
