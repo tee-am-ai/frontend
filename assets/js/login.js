@@ -49,6 +49,9 @@ function responseData(result) {
 document.getElementById("button").addEventListener("click", Login);
 
 document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    Login();
+  }
 });
 
 function togglePassword() {
