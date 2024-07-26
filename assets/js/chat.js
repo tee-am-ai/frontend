@@ -26,6 +26,7 @@ function responseData(result) {
     botMessage.innerHTML = `
         <img src="assets/images/logo kecik.png" alt="Bot" class="profile-pic" />
     `;
+    botMessage.appendChild(textBotMessage);
     chatBox.appendChild(botMessage);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
