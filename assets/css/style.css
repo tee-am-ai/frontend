@@ -163,6 +163,9 @@ body {
   padding-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 20px;
+  resize: none;
+  overflow-y: hidden;
+  max-height: 150px;
 }
 
 #submit-btn {
