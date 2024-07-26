@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Head -->
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,12 +18,16 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
   <!-- script -->
 </head>
+<!-- End Head -->
+
+<!-- Body -->
 
 <body x-data="{ page: 'signin', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
   x-init="
          darkMode = JSON.parse(localStorage.getItem('darkMode'));
          $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
   :class="{'b eh': darkMode === true}">
+
   <!-- ===== Header Start ===== -->
   <header class="g s r vd ya cj" :class="{ 'hh sm _k dj bl ll' : stickyMenu }"
     @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false">
@@ -49,6 +55,7 @@
         <!-- Hamburger Toggle BTN -->
       </div>
 
+      <!-- Navigation -->
       <div class="vd wo/4 sd qo f ho oo wf yf" :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }">
         <nav>
           <ul class="tc _o sf yo cg ep">
@@ -60,7 +67,9 @@
             <li><a href="index.html#support" class="xl">FAQ</a></li>
           </ul>
         </nav>
+        <!-- End Navigation -->
 
+        <!-- Dark Mode & Sign In/Sign Up -->
         <div class="tc wf ig pb no">
           <div class="pc h io pa ra" :class="navigationOpen ? '!-ud-visible' : 'd'">
             <label class="rc ab i">
@@ -82,12 +91,14 @@
           <a href="signup.html" :class="{ 'hh/[0.15]' : page === 'home', 'sh' : page === 'home' && stickyMenu }"
             class="ek pk xl">Sign Up</a>
         </div>
+        <!-- End Dark Mode & Sign In/Sign Up -->
       </div>
     </div>
   </header>
 
   <!-- ===== Header End ===== -->
 
+  
   <main>
     <!-- ===== SignIn Form Start ===== -->
     <section class="i pg fh rm ki xn vq gj qp gr hj rp hr">
@@ -126,7 +137,7 @@
           </div>
 
           <button type="button" class="vd rj ek rc rg gh lk ml il _l gi hi" id="button">Sign In</button>
-          
+
           <p class="sj hk xj rj ob">
             Don't have an account?
             <a class="mk" href="signup.html"> Sign Up </a>
