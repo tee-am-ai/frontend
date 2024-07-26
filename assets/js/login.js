@@ -1,5 +1,7 @@
+// Import jscroot
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 
+// Function to send POST request
 function postLogin(target_url, data, responseFunction) {
   const requestOptions = {
     method: "POST",
@@ -13,6 +15,7 @@ function postLogin(target_url, data, responseFunction) {
     .catch((error) => console.log("error", error));
 }
 
+// Function to handle login
 const Login = () => {
   const target_url =
     "https://api-tee-am-ai.up.railway.app/login";
@@ -25,6 +28,7 @@ const Login = () => {
   postLogin(target_url, data, responseData);
 };
 
+// Function to handle response
 function responseData(result) {
   if (result.error === undefined || !result.error) {
     document.cookie = `Authorization=${encodeURIComponent(
