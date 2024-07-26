@@ -29,6 +29,9 @@ function responseData(result) {
     botMessage.appendChild(textBotMessage);
     chatBox.appendChild(botMessage);
     chatBox.scrollTop = chatBox.scrollHeight;
+    const text = result.answer || result.message || "No response";
+    let index = 0;
+    const typingSpeed = 10;
 }
 
 const Chat = () => {
