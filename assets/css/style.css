@@ -156,6 +156,10 @@ body {
 }
 
 #disabled-input {
+  flex: 1;
+  padding: 10px;
+  padding-left: 25px;
+  padding-top: 15px;
 }
 
 #submit-btn {
