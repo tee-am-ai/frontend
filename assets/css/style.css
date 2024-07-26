@@ -160,6 +160,9 @@ body {
   padding: 10px;
   padding-left: 25px;
   padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
 }
 
 #submit-btn {
