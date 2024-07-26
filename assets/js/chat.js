@@ -3,6 +3,7 @@ import { getValue } from "https://jscroot.github.io/element/croot.js";
 function postChat(target_url, data, responseFunction) {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", getCookie("Authorization"));
+    myHeaders.append("Content-Type", "application/json");
     const requestOptions = {
         method: 'POST',
         headers: myHeaders,
