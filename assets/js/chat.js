@@ -19,11 +19,11 @@ function postChat(target_url, data, responseFunction) {
         .catch(error => console.log('error', error));
 }
 let botMessage;
+let textBotMessage;
 function responseData(result) {
     const chatBox = document.getElementById("chat-box");
     botMessage.innerHTML = `
         <img src="assets/images/logo kecik.png" alt="Bot" class="profile-pic" />
-        <div class="bubble">${result.answer || result.message || "No response"}</div>
     `;
     chatBox.appendChild(botMessage);
     chatBox.scrollTop = chatBox.scrollHeight;
@@ -52,13 +52,14 @@ const Chat = () => {
 
         botMessage = document.createElement("div");
         botMessage.className = "message bot";
-        botMessage.innerHTML = `
-            <img src="assets/images/logo kecik.png" alt="Bot" class="profile-pic" />
-            <div class="bubble"><div class="chat-loading">
+        textBotMessage = document.createElement("div");
+        textBotMessage.className = "bubble";
+        textBotMessage.id = "typing-message";
+        textBotMessage.innerHTML = `
+            <div class="chat-loading">
             <div class="dot"></div>
             <div class="dot"></div>
             <div class="dot"></div>
-          </div>
           </div>
         `;
         chatBox.appendChild(botMessage);
