@@ -309,6 +309,9 @@ body.dark-mode .dropdown-menu .dropdown-divider {
 }
 
 #disabled-input.dark-mode {
+  background-color: #181C31;
+  color: #ffffff;
+  border: 1px solid #555555;
 }
 
 #submit-btn.dark-mode {
