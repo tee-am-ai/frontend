@@ -59,6 +59,7 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
+// Function to toggle password visibility
 function togglePassword(inputId, iconId) {
     var passwordInput = document.getElementById(inputId);
     var eyeIcon = document.getElementById(iconId);
@@ -73,10 +74,12 @@ function togglePassword(inputId, iconId) {
     }
 }
 
+// Event listener for the eye icon
 document.getElementById("toggle-password").addEventListener("click", function () {
     togglePassword("password", "eye-icon-password");
 });
 
+// Event listener for the eye icon
 document.getElementById("toggle-confirmpass").addEventListener("click", function () {
     togglePassword("confirmpass", "eye-icon-confirmpass");
 });
