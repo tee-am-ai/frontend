@@ -39,7 +39,10 @@ function responseData(result) {
             index++;
             setTimeout(typeMessage, typingSpeed);
             window.scrollTo(0, document.body.scrollHeight);
-        } 
+        } else {
+            button.removeAttribute('disabled');
+            document.getElementById('disabled-input').setAttribute('id', 'chat-input');
+        }
     }
 }
 
