@@ -90,6 +90,8 @@ const Chat = () => {
         chatBox.appendChild(botMessage);
         chatBox.scrollTop = chatBox.scrollHeight;
         window.scrollTo(0, document.body.scrollHeight);
+        document.getElementById('chat-input').setAttribute('id', 'disabled-input');
+        button.setAttribute('disabled', '');
     }
 }
 
