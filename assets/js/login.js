@@ -51,8 +51,10 @@ function responseData(result) {
   }
 }
 
+// Event listener for login button
 document.getElementById("button").addEventListener("click", Login);
 
+// Event listener for Enter key
 function togglePassword() {
     var passwordInput = document.getElementById("password");
     var eyeIcon = document.getElementById("eye-icon");
@@ -67,4 +69,5 @@ function togglePassword() {
     }
 }
 
+// Event listener for eye icon
 document.getElementById("toggle-password").addEventListener("click", togglePassword);
