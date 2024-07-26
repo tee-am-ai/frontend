@@ -166,6 +166,9 @@ body {
   resize: none;
   overflow-y: hidden;
   max-height: 150px;
+  width: calc(100% - 60px);
+  display: inline-block;
+  box-sizing: border-box;
 }
 
 #submit-btn {
