@@ -221,6 +221,9 @@ body.dark-mode #chat-input::placeholder {
   color: #cccccc;
 }
 
+body.dark-mode #disabled-input::placeholder {
+}
+
 body.dark-mode #input-area {
   background-color: #181C31;
 }
