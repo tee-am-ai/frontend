@@ -155,6 +155,9 @@ body {
   box-sizing: border-box;
 }
 
+#disabled-input {
+}
+
 #submit-btn {
   padding: 10px;
   border: none;
