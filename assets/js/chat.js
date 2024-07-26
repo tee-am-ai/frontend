@@ -22,6 +22,7 @@ let botMessage;
 let textBotMessage;
 function responseData(result) {
     const chatBox = document.getElementById("chat-box");
+    console.log(textBotMessage)
     botMessage.innerHTML = `
         <img src="assets/images/logo kecik.png" alt="Bot" class="profile-pic" />
     `;
