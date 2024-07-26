@@ -1,4 +1,5 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
+import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
 
 function postLogin(target_url, data, responseFunction) {
   const requestOptions = {
@@ -27,9 +28,7 @@ const Login = () => {
 
 function responseData(result) {
   if (result.error === undefined || !result.error) {
-    document.cookie = `Authorization=${encodeURIComponent(
-      result.token
-    )}; path=/;`;
+    setCookieWithExpireHour("Authorization", result.token, 2);
 
     Swal.fire({
       icon: "success",
@@ -48,6 +47,9 @@ function responseData(result) {
 }
 
 document.getElementById("button").addEventListener("click", Login);
+
+document.addEventListener("keydown", function (event) {
+});
 
 function togglePassword() {
     var passwordInput = document.getElementById("password");
