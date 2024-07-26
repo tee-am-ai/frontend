@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Start Head -->
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,9 +16,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
   <!-- script -->
 </head>
-<!-- End Head -->
 
-<!-- Start Body -->
 <body x-data="{ page: 'signin', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
   x-init="
          darkMode = JSON.parse(localStorage.getItem('darkMode'));
@@ -52,7 +49,6 @@
         <!-- Hamburger Toggle BTN -->
       </div>
 
-      <!-- Start Navigation -->
       <div class="vd wo/4 sd qo f ho oo wf yf" :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }">
         <nav>
           <ul class="tc _o sf yo cg ep">
@@ -87,7 +83,6 @@
             class="ek pk xl">Sign Up</a>
         </div>
       </div>
-      <!-- End Navigation -->
     </div>
   </header>
 
@@ -111,7 +106,6 @@
           <h2 class="ek ck kk wm xb">Sign in to your Account</h2>
         </div>
 
-        <!-- Form Login -->
         <form class="sb" action="https://formbold.com/s/unique_form_id" method="POST">
           <div class="wb">
             <label class="rc kk wm vb" for="email">Email</label>
@@ -132,7 +126,7 @@
           </div>
 
           <button type="button" class="vd rj ek rc rg gh lk ml il _l gi hi" id="button">Sign In</button>
-
+          
           <p class="sj hk xj rj ob">
             Don't have an account?
             <a class="mk" href="signup.html"> Sign Up </a>
@@ -155,6 +149,5 @@
   <script defer src="assets/landingpages/bundle.js"></script>
   <script type="module" src="assets/js/login.js"></script>
 </body>
-<!-- End Body -->
 
 </html>
