@@ -51,6 +51,7 @@ function responseData(result) {
     textBotMessage.classList.add('bubble');
     typeMessage();
     const url = window.location.href
+    url.searchParams.set('chat', result.chat_id)
     console.log(result)
 }
 
