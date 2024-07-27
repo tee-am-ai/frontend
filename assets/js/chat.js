@@ -98,6 +98,8 @@ const Chat = () => {
     }
 }
 
+console.log(window.location.href);
+
 document.getElementById("submit-btn").addEventListener("click", Chat);
 
 document.getElementById("chat-input").addEventListener("keypress", function (event) {
