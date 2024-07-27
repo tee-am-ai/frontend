@@ -50,9 +50,8 @@ function responseData(result) {
 
     textBotMessage.classList.add('bubble');
     typeMessage();
-    const url = window.location.href
-    url.searchParams.set('chat', result.chat_id)
-    console.log(result)
+    // append result.id to current url
+    window.location.href = `https://api-tee-am-ai.up.railway.app/chat/${result.idtopic}`;
 }
 
 const button = document.querySelector('#submit-btn');
