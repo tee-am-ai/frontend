@@ -51,6 +51,7 @@ function responseData(result) {
     textBotMessage.classList.add('bubble');
     typeMessage();
     const url = new URL(window.location.href);
+    url.searchParams.set("query", text);
 }
 
 const button = document.querySelector('#submit-btn');
