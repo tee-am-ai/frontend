@@ -50,8 +50,7 @@ function responseData(result) {
 
     textBotMessage.classList.add('bubble');
     typeMessage();
-    const url = window.location.href;
-    const urlParams = new URLSearchParams(url.split('?')[1]);
+    const url = new URL(window.location.href);
 }
 
 const button = document.querySelector('#submit-btn');
