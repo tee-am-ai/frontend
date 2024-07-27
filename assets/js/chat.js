@@ -53,6 +53,7 @@ function responseData(result) {
     const url = new URL(window.location.href);
     url.searchParams.append("topic", result.idtopic);
     console.log(url.href);
+    window.history.pushState({}, "", url.href);
 }
 
 const button = document.querySelector('#submit-btn');
