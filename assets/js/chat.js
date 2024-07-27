@@ -45,12 +45,12 @@ function responseData(result) {
         } else {
             button.removeAttribute('disabled');
             document.getElementById('disabled-input').setAttribute('id', 'chat-input');
+            window.history.pushState({}, "", `?topic=${result.idtopic}`);
         }
     }
 
     textBotMessage.classList.add('bubble');
     typeMessage();
-    window.history.pushState({}, "", `?topic=${result.idtopic}`);
 }
 
 const button = document.querySelector('#submit-btn');
