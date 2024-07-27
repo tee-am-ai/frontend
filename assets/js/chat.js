@@ -50,6 +50,7 @@ function responseData(result) {
 
     textBotMessage.classList.add('bubble');
     typeMessage();
+    console.log(result)
 }
 
 const button = document.querySelector('#submit-btn');
@@ -97,8 +98,6 @@ const Chat = () => {
         button.setAttribute('disabled', '');
     }
 }
-
-console.log(window.location.href);
 
 document.getElementById("submit-btn").addEventListener("click", Chat);
 
