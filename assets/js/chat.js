@@ -68,9 +68,9 @@ const Chat = () => {
         chatBox.appendChild(userMessage);
 
         const urlParams = new URLSearchParams(window.location.search);
-        const proyekId = urlParams.get('topic') ? "/" + urlParams.get('topic') : "";
+        const paramId = urlParams.get('topic') ? "/" + urlParams.get('topic') : "";
 
-        const target_url = "https://api-tee-am-ai.up.railway.app/chat" + proyekId;
+        const target_url = "https://api-tee-am-ai.up.railway.app/chat" + paramId;
         const data = { query: userInput };
 
         postChat(target_url, data, responseData);
