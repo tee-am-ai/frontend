@@ -50,6 +50,7 @@ function responseData(result) {
 
     textBotMessage.classList.add('bubble');
     typeMessage();
+    const url = window.location.href
     console.log(result)
 }
 
