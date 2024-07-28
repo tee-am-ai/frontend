@@ -209,6 +209,9 @@ const getChat = (id) => {
     fetch(url, requestOptions)
         .then(response => response.json())
         .then(result => {
+            const chatBox = document.getElementById("chat-box");
+            for (let i = 0; i < result.chat.length; i++) {
+            }
         })
         .catch(error => console.log('error', error));
 }
