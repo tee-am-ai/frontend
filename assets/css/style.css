@@ -409,7 +409,7 @@ h6 {
   opacity: 0;
   right: 41%;
   bottom: 15%;
-  z-index: 99999;
+  /* z-index: 99999; */
   background-color: #9900ff;
   width: 40px;
   height: 40px;
@@ -690,7 +690,7 @@ body.dark-mode .dropdown-menu .dropdown-item:hover {
 }
 
 .nav-tabs-bordered .nav-link.active {
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #4154f1;
   border-bottom: 2px solid #4154f1;
 }
