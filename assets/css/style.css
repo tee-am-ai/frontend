@@ -1166,6 +1166,8 @@ body.dark-mode .dropdown-menu .dropdown-item:hover {
 
 .sidebar-header {
   font-size: 12px;
+  padding-left: 10px;
+  margin: 0;
 }
 
 /*--------------------------------------------------------------
