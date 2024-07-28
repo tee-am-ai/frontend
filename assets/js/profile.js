@@ -43,8 +43,8 @@ function responseUserData(result) {
 getUser(apiUrl, responseUserData);
 
 
-<!-- Dark Mode Toggle Script -->
-<script>
+// Dark Mode Toggle Script
+
   document.getElementById("toggle-dark-mode").addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
 
@@ -82,4 +82,3 @@ getUser(apiUrl, responseUserData);
       document.getElementById("mode-icon").classList.add("bi-moon");
     }
   });
-</script>
