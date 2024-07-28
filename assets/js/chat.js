@@ -144,6 +144,11 @@ document.getElementById("chat-input").addEventListener("keypress", function (eve
 const getChatHistory = () => {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", getCookie("Authorization"));
+    const requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
 }
 
 
