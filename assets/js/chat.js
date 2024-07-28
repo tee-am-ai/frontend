@@ -272,6 +272,11 @@ const deleteChat = () => {
 const deleteData = (url) => {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", getCookie("Authorization"));
+    const requestOptions = {
+        method: 'DELETE',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
 }
 
 // document.getElementById("chat-input").addEventListener("keydown", function (event) {
