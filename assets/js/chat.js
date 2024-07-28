@@ -68,6 +68,9 @@ function responseData(result) {
             sidebarNav.insertBefore(chatList, sidebarNav.childNodes[2]);
             window.history.pushState({}, "", `?topic=${result.idtopic}`);
             const idChat = document.getElementById(result.idtopic);
+            idChat.classList.add('active');
+            const iconDelete = document.createElement('i');
+            iconDelete.className = 'bi bi-trash3-fill';
         }
     }
 
