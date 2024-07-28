@@ -73,6 +73,9 @@ function responseData(result) {
             iconDelete.className = 'bi bi-trash3-fill';
             iconDelete.id = 'delete-chat';
             iconDelete.style.cursor = 'pointer';
+            idChat.appendChild(iconDelete);
+            document.getElementById("btnNewChat").classList.remove('active')
+            deleteChat();
         }
     }
 
