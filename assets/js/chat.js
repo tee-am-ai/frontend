@@ -272,15 +272,7 @@ const deleteData = (url) => {
         .catch(error => console.log('error', error));
 }
 
-// document.getElementById("chat-input").addEventListener("keydown", function (event) {
-//     if (event.key === "Enter" && event.shiftKey) {
-//         const cursorPosition = this.selectionStart;
-//         this.value = this.value.substring(0, cursorPosition) + "\n" + this.value.substring(cursorPosition);
-//         this.selectionStart = cursorPosition + 1;
-//         this.selectionEnd = cursorPosition + 1;
-//         event.preventDefault();
-//     }
-// });
+
 
 document.getElementById('toggle-dark-mode').addEventListener('click', function () {
     const body = document.body;
