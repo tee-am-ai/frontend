@@ -149,22 +149,5 @@
   <!-- <script src="assets/js/user.js"></script> -->
   <script type="module" src="assets/js/logout.js"></script>
   <script src="assets/js/auth.js"></script>
-  <script>
-    document.getElementById('toggle-dark-mode').addEventListener('click', function () {
-      var icon = document.getElementById('dark-mode-icon');
-      var text = document.getElementById('dark-mode-text');
-      if (text.innerHTML === 'Dark Mode') {
-        icon.classList.remove('bi-moon');
-        icon.classList.add('bi-sun');
-        text.innerHTML = 'Light Mode';
-        // Add your dark mode activation code here
-      } else {
-        icon.classList.remove('bi-sun');
-        icon.classList.add('bi-moon');
-        text.innerHTML = 'Dark Mode';
-        // Add your light mode activation code here
-      }
-    });
-  </script>
 </body>
 </html>
