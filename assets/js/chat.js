@@ -166,6 +166,12 @@ const getChatHistory = () => {
                 } else {
                     botMessage = result[i].topic
                 }
+                chatList.innerHTML = `
+                        <a href="chat.html?topic=${result[i]._id}" style="text-decoration: none;">
+                            <span>${botMessage}</span>
+                        </a>
+                `;
+                chatBox.appendChild(chatList);
             }
         })
         .catch(error => console.log('error', error));
