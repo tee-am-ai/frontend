@@ -277,6 +277,11 @@ const deleteData = (url) => {
         headers: myHeaders,
         redirect: 'follow'
     };
+
+    fetch(url, requestOptions)
+        .then(response => response.json())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
 }
 
 // document.getElementById("chat-input").addEventListener("keydown", function (event) {
