@@ -196,6 +196,10 @@ const getChatHistory = () => {
 //   });
   
 
+const getChat = (id) => {
+    const url = "https://api-tee-am-ai.up.railway.app/chat/" + id;
+    const myHeaders = new Headers();
+}
 
 getChatHistory();
 
