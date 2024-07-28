@@ -702,7 +702,7 @@ body.dark-mode .dropdown-menu .dropdown-item:hover {
   line-height: 1;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .logo {
     width: 280px;
   }
