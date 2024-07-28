@@ -175,6 +175,9 @@ const getChatHistory = () => {
             }
             const urlParams = new URLSearchParams(window.location.search);
             const paramId = urlParams.get('topic')
+            if (paramId !== null) {
+                return getChat(paramId);
+            }
         })
         .catch(error => console.log('error', error));
 }
