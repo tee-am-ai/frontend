@@ -233,6 +233,8 @@ const getChat = (id) => {
     const idChat = document.getElementById(id);
     idChat.classList.add('active');
     const iconDelete = document.createElement('i');
+    iconDelete.className = 'bi bi-trash3-fill';
+    iconDelete.id = 'delete-chat';
 }
 
 getChatHistory();
