@@ -743,7 +743,7 @@ body.dark-mode .dropdown-menu .dropdown-item:hover {
   padding: 0 20px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .header .search-bar {
     position: fixed;
     top: 50px;
