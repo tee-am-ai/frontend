@@ -26,3 +26,31 @@ const Login = () => {
   postLogin(target_url, data, responseData);
 };
 
+function responseData(result) {
+  if (result.error === undefined || !result.error) {
+    setCookieWithExpireHour("Authorization", result.token, 2);
+
+    Swal.fire({
+      icon: "success",
+      title: "Login Successful",
+      text: result.message,
+    }).then(() => {
+      window.location.href = "./chat.html";
+    });
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Login Failed",
+      text: result.message,
+    });
+  }
+}
+
+document.getElementById("button").addEventListener("click", Login);
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    Login();
+  }
+});
+
