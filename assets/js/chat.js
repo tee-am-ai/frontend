@@ -161,6 +161,11 @@ const getChatHistory = () => {
                 chatList.className = "nav-chat new-chat";
                 chatList.id = result[i]._id;
                 let botMessage;
+                if (result[i].topic.length > 40) {
+                    botMessage = result[i].topic.slice(0, 20) + "...";
+                } else {
+                    botMessage = result[i].topic
+                }
             }
         })
         .catch(error => console.log('error', error));
