@@ -50,6 +50,9 @@ function responseData(result) {
             if (paramId !== "") {
                 return;
             }
+            const chatList = document.createElement("li");
+            chatList.className = "nav-chat new-chat";
+            chatList.id = result.idtopic;
         }
     }
 
