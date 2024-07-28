@@ -64,6 +64,10 @@ function responseData(result) {
             <span>${botMessage}</span>
             </a>
             `;
+            const sidebarNav = document.getElementById("sidebar-nav");
+            sidebarNav.insertBefore(chatList, sidebarNav.childNodes[2]);
+            window.history.pushState({}, "", `?topic=${result.idtopic}`);
+            const idChat = document.getElementById(result.idtopic);
         }
     }
 
