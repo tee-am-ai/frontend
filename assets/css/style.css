@@ -54,14 +54,14 @@ body {
 #chat-box {
   display: flex;
   overflow-y: auto;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   background-color: #fff;
   flex: 1;
   border: 1px solid rgb(246, 249, 255);
   padding: 10px;
   flex-direction: column;
   transition: margin-left 0.3s ease;
-  margin-left: 32px;
+  /* margin-left: 32px; */
   border-radius: 10px;
 }
 
