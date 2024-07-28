@@ -258,7 +258,12 @@ const deleteChat = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 const urlParams = new URLSearchParams(window.location.search);
-                const paramId = urlParams.get('topic') ? "/" + urlParams.get('topic') : ""; 
+                const paramId = urlParams.get('topic') ? "/" + urlParams.get('topic') : "";
+                if (paramId !== "") {
+                    const url = "https://api-tee-am-ai.up.railway.app/chat" + paramId;
+                    deleteData(url);
+                    window.location.href = "chat.html";
+                }   
             }
         })
     })
