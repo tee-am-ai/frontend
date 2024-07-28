@@ -1092,6 +1092,10 @@ body.dark-mode .dropdown-menu .dropdown-item:hover {
   margin-bottom: 5px;
   /* margin-right: 15px; */
   padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  justify-content: space-between;
 }
 
 .sidebar-nav .nav-link i {
