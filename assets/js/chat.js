@@ -156,6 +156,8 @@ const getChatHistory = () => {
             console.log(result);
             const chatBox = document.getElementById("sidebar-nav");
             result = result.reverse();
+            for (let i = 0; i < result.length; i++) {
+            }
         })
         .catch(error => console.log('error', error));
 }
