@@ -1164,6 +1164,10 @@ body.dark-mode .dropdown-menu .dropdown-item:hover {
   background-color: #4154f1;
 }
 
+.sidebar-header {
+  font-size: 12px;
+}
+
 /*--------------------------------------------------------------
 # Dashboard
 --------------------------------------------------------------*/
