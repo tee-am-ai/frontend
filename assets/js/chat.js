@@ -157,6 +157,10 @@ const getChatHistory = () => {
             const chatBox = document.getElementById("sidebar-nav");
             result = result.reverse();
             for (let i = 0; i < result.length; i++) {
+                const chatList = document.createElement("li");
+                chatList.className = "nav-chat new-chat";
+                chatList.id = result[i]._id;
+                let botMessage;
             }
         })
         .catch(error => console.log('error', error));
