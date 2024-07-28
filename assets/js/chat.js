@@ -228,7 +228,11 @@ const getChat = (id) => {
                 chatBox.appendChild(botMessage);
             }
         })
-        .catch(error => console.log('error', error));
+    .catch(error => console.log('error', error));
+
+    const idChat = document.getElementById(id);
+    idChat.classList.add('active');
+    const iconDelete = document.createElement('i');
 }
 
 getChatHistory();
