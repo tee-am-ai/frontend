@@ -141,6 +141,10 @@ document.getElementById("chat-input").addEventListener("keypress", function (eve
     }
 });
 
+const getChatHistory = () => {
+}
+
+
 // document.getElementById("chat-input").addEventListener("keydown", function (event) {
 //     if (event.key === "Enter" && event.shiftKey) {
 //         const cursorPosition = this.selectionStart;
