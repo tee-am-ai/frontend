@@ -205,6 +205,12 @@ const getChat = (id) => {
         headers: myHeaders,
         redirect: 'follow'
     };
+
+    fetch(url, requestOptions)
+        .then(response => response.json())
+        .then(result => {
+        })
+        .catch(error => console.log('error', error));
 }
 
 getChatHistory();
