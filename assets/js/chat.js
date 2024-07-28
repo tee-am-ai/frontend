@@ -178,6 +178,8 @@ const getChatHistory = () => {
             if (paramId !== null) {
                 return getChat(paramId);
             }
+            const idChat = document.getElementById("btnNewChat");
+            idChat.classList.add('active');
         })
         .catch(error => console.log('error', error));
 }
