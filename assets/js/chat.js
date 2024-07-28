@@ -256,7 +256,9 @@ const deleteChat = () => {
             confirmButtonText: 'Ya, hapus!',
             cancelButtonText: 'Batal'
         }).then((result) => {
-            if (result.isConfirmed) { 
+            if (result.isConfirmed) {
+                const urlParams = new URLSearchParams(window.location.search);
+                const paramId = urlParams.get('topic') ? "/" + urlParams.get('topic') : ""; 
             }
         })
     })
