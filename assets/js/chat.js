@@ -237,10 +237,17 @@ const getChat = (id) => {
     iconDelete.id = 'delete-chat';
     iconDelete.style.cursor = 'pointer';
     idChat.appendChild(iconDelete);
+
+    deleteChat();
 }
 
 getChatHistory();
 
+const deleteChat = () => {
+    document.getElementById("delete-chat").addEventListener("click", function () {
+        
+    })
+}
 
 // document.getElementById("chat-input").addEventListener("keydown", function (event) {
 //     if (event.key === "Enter" && event.shiftKey) {
