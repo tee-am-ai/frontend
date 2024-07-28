@@ -269,6 +269,11 @@ const deleteChat = () => {
     })
 }
 
+const deleteData = (url) => {
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", getCookie("Authorization"));
+}
+
 // document.getElementById("chat-input").addEventListener("keydown", function (event) {
 //     if (event.key === "Enter" && event.shiftKey) {
 //         const cursorPosition = this.selectionStart;
