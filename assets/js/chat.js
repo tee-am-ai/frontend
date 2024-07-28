@@ -221,6 +221,11 @@ const getChat = (id) => {
 
                 const botMessage = document.createElement("div");
                 botMessage.className = "message bot";
+                botMessage.innerHTML = `
+                    <img src="assets/images/logo kecik.png" alt="Bot" class="profile-pic" />
+                    <div class="bubble">${result.chat[i].answer}</div>
+                `;
+                chatBox.appendChild(botMessage);
             }
         })
         .catch(error => console.log('error', error));
