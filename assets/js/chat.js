@@ -45,7 +45,11 @@ function responseData(result) {
         } else {
             button.removeAttribute('disabled');
             document.getElementById('disabled-input').setAttribute('id', 'chat-input');
-            window.history.pushState({}, "", `?topic=${result.idtopic}`);
+            const urlParams = new URLSearchParams(window.location.search);
+            const paramId = urlParams.get('topic') ? "/" + urlParams.get('topic') : "";
+            if (paramId !== "") {
+                return;
+            }
         }
     }
 
