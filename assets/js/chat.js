@@ -255,6 +255,9 @@ const deleteChat = () => {
             cancelButtonColor: '#d33',
             confirmButtonText: 'Ya, hapus!',
             cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) { 
+            }
         })
     })
 }
