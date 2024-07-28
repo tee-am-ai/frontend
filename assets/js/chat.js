@@ -213,6 +213,11 @@ const getChat = (id) => {
             for (let i = 0; i < result.chat.length; i++) {
                 const userMessage = document.createElement("div");
                 userMessage.className = "message user";
+                userMessage.innerHTML = `
+                    <img src="assets/images/user-icon1.jpeg" alt="User" class="profile-pic" />
+                    <div class="bubble">${result.chat[i].question}</div>
+                `;
+                chatBox.appendChild(userMessage);
             }
         })
         .catch(error => console.log('error', error));
