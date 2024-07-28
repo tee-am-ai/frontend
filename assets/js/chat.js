@@ -53,6 +53,12 @@ function responseData(result) {
             const chatList = document.createElement("li");
             chatList.className = "nav-chat new-chat";
             chatList.id = result.idtopic;
+            let botMessage;
+            if (result.question.length > 40) {
+                botMessage = result.question.slice(0, 20) + "...";
+            } else {
+                botMessage = result.question
+            }
         }
     }
 
