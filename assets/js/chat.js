@@ -59,6 +59,11 @@ function responseData(result) {
             } else {
                 botMessage = result.question
             }
+            chatList.innerHTML = `
+            <a href="chat.html?topic=${result.idtopic}">
+            <span>${botMessage}</span>
+            </a>
+            `;
         }
     }
 
