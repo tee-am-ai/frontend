@@ -1,9 +1,12 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 
 function postChat(target_url, data, responseFunction) {
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", getCookie("Authorization"));
+    myHeaders.append("Content-Type", "application/json");
     const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: myHeaders,
         body: JSON.stringify(data),
         redirect: 'follow'
     };
@@ -42,6 +45,37 @@ function responseData(result) {
         } else {
             button.removeAttribute('disabled');
             document.getElementById('disabled-input').setAttribute('id', 'chat-input');
+            const urlParams = new URLSearchParams(window.location.search);
+            const paramId = urlParams.get('topic') ? "/" + urlParams.get('topic') : "";
+            if (paramId !== "") {
+                return;
+            }
+            const chatList = document.createElement("li");
+            chatList.className = "nav-chat new-chat";
+            chatList.id = result.idtopic;
+            let botMessage;
+            if (result.question.length > 40) {
+                botMessage = result.question.slice(0, 20) + "...";
+            } else {
+                botMessage = result.question
+            }
+            chatList.innerHTML = `
+            <a href="chat.html?topic=${result.idtopic}">
+            <span>${botMessage}</span>
+            </a>
+            `;
+            const sidebarNav = document.getElementById("sidebar-nav");
+            sidebarNav.insertBefore(chatList, sidebarNav.childNodes[2]);
+            window.history.pushState({}, "", `?topic=${result.idtopic}`);
+            const idChat = document.getElementById(result.idtopic);
+            idChat.classList.add('active');
+            const iconDelete = document.createElement('i');
+            iconDelete.className = 'bi bi-trash3-fill';
+            iconDelete.id = 'delete-chat';
+            iconDelete.style.cursor = 'pointer';
+            idChat.appendChild(iconDelete);
+            document.getElementById("btnNewChat").classList.remove('active')
+            deleteChat();
         }
     }
 
@@ -63,7 +97,10 @@ const Chat = () => {
         `;
         chatBox.appendChild(userMessage);
 
-        const target_url = "https://api-tee-am-ai.up.railway.app/chat";
+        const urlParams = new URLSearchParams(window.location.search);
+        const paramId = urlParams.get('topic') ? "/" + urlParams.get('topic') : "";
+
+        const target_url = "https://api-tee-am-ai.up.railway.app/chat" + paramId;
         const data = { query: userInput };
 
         postChat(target_url, data, responseData);
@@ -103,6 +140,137 @@ document.getElementById("chat-input").addEventListener("keypress", function (eve
         Chat();
     }
 });
+
+const getChatHistory = () => {
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", getCookie("Authorization"));
+    const requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
+
+    fetch("https://api-tee-am-ai.up.railway.app/chat", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+            console.log(result);
+            const chatBox = document.getElementById("sidebar-nav");
+            result = result.reverse();
+            for (let i = 0; i < result.length; i++) {
+                const chatList = document.createElement("li");
+                chatList.className = "nav-chat new-chat";
+                chatList.id = result[i]._id;
+                let botMessage;
+                if (result[i].topic.length > 40) {
+                    botMessage = result[i].topic.slice(0, 20) + "...";
+                } else {
+                    botMessage = result[i].topic
+                }
+                chatList.innerHTML = `
+                        <a href="chat.html?topic=${result[i]._id}" style="text-decoration: none;">
+                            <span>${botMessage}</span>
+                        </a>
+                `;
+                chatBox.appendChild(chatList);
+            }
+            const urlParams = new URLSearchParams(window.location.search);
+            const paramId = urlParams.get('topic')
+            if (paramId !== null) {
+                return getChat(paramId);
+            }
+            const idChat = document.getElementById("btnNewChat");
+            idChat.classList.add('active');
+        })
+        .catch(error => console.log('error', error));
+} 
+
+const getChat = (id) => {
+    const url = "https://api-tee-am-ai.up.railway.app/chat/" + id;
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", getCookie("Authorization"));
+    const requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
+
+    fetch(url, requestOptions)
+        .then(response => response.json())
+        .then(result => {
+            const chatBox = document.getElementById("chat-box");
+            for (let i = 0; i < result.chat.length; i++) {
+                const userMessage = document.createElement("div");
+                userMessage.className = "message user";
+                userMessage.innerHTML = `
+                    <img src="assets/images/user-icon1.jpeg" alt="User" class="profile-pic" />
+                    <div class="bubble">${result.chat[i].question}</div>
+                `;
+                chatBox.appendChild(userMessage);
+
+                const botMessage = document.createElement("div");
+                botMessage.className = "message bot";
+                botMessage.innerHTML = `
+                    <img src="assets/images/logo kecik.png" alt="Bot" class="profile-pic" />
+                    <div class="bubble">${result.chat[i].answer}</div>
+                `;
+                chatBox.appendChild(botMessage);
+            }
+        })
+    .catch(error => console.log('error', error));
+
+    const idChat = document.getElementById(id);
+    idChat.classList.add('active');
+    const iconDelete = document.createElement('i');
+    iconDelete.className = 'bi bi-trash3-fill';
+    iconDelete.id = 'delete-chat';
+    iconDelete.style.cursor = 'pointer';
+    idChat.appendChild(iconDelete);
+
+    deleteChat();
+}
+
+getChatHistory();
+
+const deleteChat = () => {
+    document.getElementById("delete-chat").addEventListener("click", function () {
+        // sweetAlert
+        Swal.fire({
+            title: 'Hapus chat?',
+            text: "Apakah kamu yakin ingin menghapus chat ini?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, hapus!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const urlParams = new URLSearchParams(window.location.search);
+                const paramId = urlParams.get('topic') ? "/" + urlParams.get('topic') : "";
+                if (paramId !== "") {
+                    const url = "https://api-tee-am-ai.up.railway.app/chat" + paramId;
+                    deleteData(url);
+                    window.location.href = "chat.html";
+                }   
+            }
+        })
+    })
+}
+
+const deleteData = (url) => {
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", getCookie("Authorization"));
+    const requestOptions = {
+        method: 'DELETE',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
+
+    fetch(url, requestOptions)
+        .then(response => response.json())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+}
 
 // document.getElementById("chat-input").addEventListener("keydown", function (event) {
 //     if (event.key === "Enter" && event.shiftKey) {
