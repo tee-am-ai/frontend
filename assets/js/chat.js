@@ -184,6 +184,21 @@ const getChatHistory = () => {
         .catch(error => console.log('error', error));
 }
 
+// document.querySelectorAll('.sidebar-nav .nav-chat').forEach(function(element) {
+//     element.addEventListener('click', function() {
+//       // Remove the 'active' class from all elements
+//       document.querySelectorAll('.sidebar-nav .nav-chat').forEach(function(el) {
+//         el.classList.remove('active');
+//       });
+//       // Add the 'active' class to the clicked element
+//       this.classList.add('active');
+//     });
+//   });
+  
+
+
+getChatHistory();
+
 
 // document.getElementById("chat-input").addEventListener("keydown", function (event) {
 //     if (event.key === "Enter" && event.shiftKey) {
