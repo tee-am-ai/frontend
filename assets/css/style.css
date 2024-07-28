@@ -130,6 +130,7 @@ body {
   border-radius: 10px;
   gap: 10px;
   align-items: center;
+  z-index: 0;
 }
 
 @media (max-width: 767px) {
@@ -416,6 +417,7 @@ h6 {
   height: 40px;
   border-radius: 50%;
   transition: all 0.4s;
+  z-index: 0;
 }
 
 .back-to-top i {
