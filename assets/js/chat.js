@@ -173,6 +173,8 @@ const getChatHistory = () => {
                 `;
                 chatBox.appendChild(chatList);
             }
+            const urlParams = new URLSearchParams(window.location.search);
+            const paramId = urlParams.get('topic')
         })
         .catch(error => console.log('error', error));
 }
