@@ -218,6 +218,9 @@ const getChat = (id) => {
                     <div class="bubble">${result.chat[i].question}</div>
                 `;
                 chatBox.appendChild(userMessage);
+
+                const botMessage = document.createElement("div");
+                botMessage.className = "message bot";
             }
         })
         .catch(error => console.log('error', error));
