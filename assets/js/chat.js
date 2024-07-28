@@ -245,7 +245,17 @@ getChatHistory();
 
 const deleteChat = () => {
     document.getElementById("delete-chat").addEventListener("click", function () {
-        
+        // sweetAlert
+        Swal.fire({
+            title: 'Hapus chat?',
+            text: "Apakah kamu yakin ingin menghapus chat ini?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, hapus!',
+            cancelButtonText: 'Batal'
+        })
     })
 }
 
