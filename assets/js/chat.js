@@ -211,6 +211,8 @@ const getChat = (id) => {
         .then(result => {
             const chatBox = document.getElementById("chat-box");
             for (let i = 0; i < result.chat.length; i++) {
+                const userMessage = document.createElement("div");
+                userMessage.className = "message user";
             }
         })
         .catch(error => console.log('error', error));
