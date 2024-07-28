@@ -149,6 +149,13 @@ const getChatHistory = () => {
         headers: myHeaders,
         redirect: 'follow'
     };
+
+    fetch("https://api-tee-am-ai.up.railway.app/chat", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+            console.log(result);
+        })
+        .catch(error => console.log('error', error));
 }
 
 
