@@ -44,41 +44,40 @@ getUser(apiUrl, responseUserData);
 
 
 // Dark Mode Toggle Script
-
-  document.getElementById("toggle-dark-mode").addEventListener("click", function () {
+document.getElementById("toggle-dark-mode").addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
 
     // Update the dropdown text and icon based on the mode
     const modeText = document.getElementById("mode-text");
     const modeIcon = document.getElementById("mode-icon");
     if (document.body.classList.contains("dark-mode")) {
-      modeText.textContent = "Light Mode";
-      modeIcon.classList.remove("bi-moon");
-      modeIcon.classList.add("bi-sun");
+        modeText.textContent = "Light Mode";
+        modeIcon.classList.remove("bi-moon");
+        modeIcon.classList.add("bi-sun");
     } else {
-      modeText.textContent = "Dark Mode";
-      modeIcon.classList.remove("bi-sun");
-      modeIcon.classList.add("bi-moon");
+        modeText.textContent = "Dark Mode";
+        modeIcon.classList.remove("bi-sun");
+        modeIcon.classList.add("bi-moon");
     }
 
     // Save mode preference to localStorage
     if (document.body.classList.contains("dark-mode")) {
-      localStorage.setItem("theme", "dark");
+        localStorage.setItem("theme", "dark");
     } else {
-      localStorage.setItem("theme", "light");
+        localStorage.setItem("theme", "light");
     }
-  });
+});
 
-  // Apply the saved theme on page load
-  document.addEventListener("DOMContentLoaded", function () {
+// Apply the saved theme on page load
+document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("theme") === "dark") {
-      document.body.classList.add("dark-mode");
-      document.getElementById("mode-text").textContent = "Light Mode";
-      document.getElementById("mode-icon").classList.remove("bi-moon");
-      document.getElementById("mode-icon").classList.add("bi-sun");
+        document.body.classList.add("dark-mode");
+        document.getElementById("mode-text").textContent = "Light Mode";
+        document.getElementById("mode-icon").classList.remove("bi-moon");
+        document.getElementById("mode-icon").classList.add("bi-sun");
     } else {
-      document.getElementById("mode-text").textContent = "Dark Mode";
-      document.getElementById("mode-icon").classList.remove("bi-sun");
-      document.getElementById("mode-icon").classList.add("bi-moon");
+        document.getElementById("mode-text").textContent = "Dark Mode";
+        document.getElementById("mode-icon").classList.remove("bi-sun");
+        document.getElementById("mode-icon").classList.add("bi-moon");
     }
-  });
+});
